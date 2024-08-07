@@ -4,7 +4,7 @@ Welcome to the **AAVESH-Website** repository!
 
 ## Overview
 
-This repository contains the source code and assets for the official website of AAVESH 2024, an annual event organized by IIIT-Allahabad. AAVESH is a vibrant and exciting gathering that features a variety of technical and cultural activities. Our website serves as the central hub for information, updates, and registration.
+This repository contains the source code and assets for the official website of AAVESH 2024, an annual event organized by IIIT-Una. AAVESH is a vibrant and exciting gathering that features a variety of technical and cultural activities. Our website serves as the central hub for information, updates, and registration.
 
 ## Features
 
