@@ -1,7 +1,13 @@
-import "./App.css";
+import Header from "./components/Header";
+import RoboArm from "./components/RoboArm";
 
 function App() {
-  return <>AAVESH</>;
+  return (
+    <>
+      <Header />
+      <RoboArm />
+    </>
+  );
 }
 
 export default App;
