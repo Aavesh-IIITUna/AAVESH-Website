@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import socials from "../Socials";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const [user, setUser] = useState({
@@ -30,15 +31,46 @@ const Footer = () => {
     });
   };
 
+  const variants = {
+    initial: {
+      backgroundPosition: "0 50%",
+    },
+    animate: {
+      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    },
+  };
+
   return (
-    <>
-      <div className="relative" style={{ zIndex: 10 }}>
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-5 w-full bg-cyan-400 blur-3xl opacity-50 rounded-full z-20"></div>
-      </div>
-      <footer
-        className="relative bg-[#1c1c1c] text-white py-8 rounded-t-3xl shadow-lg mt-10"
-        style={{ zIndex: 5 }}
-      >
+    <div className="relative  group">
+      <motion.div
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        style={{
+          backgroundSize: "400% 400%",
+        }}
+        className="absolute inset-0 rounded-3xl z-[1] opacity-60 group-hover:opacity-100 blur-xl transition duration-500 will-change-transform bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
+      />
+      <motion.div
+        variants={variants}
+        initial="initial"
+        animate="animate"
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        style={{
+          backgroundSize: "400% 400%",
+        }}
+        className="absolute inset-0 rounded-3xl z-[1] will-change-transform bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
+      />
+      <div className="relative z-10 bg-[#1c1c1c] text-white py-8 rounded-t-3xl shadow-lg mt-10">
         <div className="container mx-auto px-4 relative">
           <div className="text-center font-iceland mb-6">
             <img
@@ -46,7 +78,7 @@ const Footer = () => {
               alt="AAVESH Logo"
               className="m-4 w-64 lg:block hidden"
             />
-            <div className="border-t-2 border-gray-600 mb-4 lg:block hidden"></div>
+            <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
             <h2 className="text-5xl md:text-7xl font-iceland font-bold m-2">
               LET'S CONNECT!
             </h2>
@@ -74,7 +106,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="bg-gray-600 text-white py-2 px-4 rounded-full"
+                className="bg-cyan-600 text-white py-2 px-4 rounded-full"
               >
                 SEND
               </button>
@@ -96,12 +128,12 @@ const Footer = () => {
               ))}
             </div>
             <p>
-              Developed by <span className="text-gray-400">@aavesh</span>
+              Developed by <span className="text-cyan-600">@aavesh</span>
             </p>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </div>
   );
 };
 
