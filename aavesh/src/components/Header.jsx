@@ -1,12 +1,22 @@
 import { useContext } from "react";
-import { FaHome, FaUser, FaImage, FaEnvelope, FaCalendarAlt, FaHandsHelping } from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaImage,
+  FaEnvelope,
+  FaCalendarAlt,
+  FaHandsHelping,
+} from "react-icons/fa";
 import GlobalContext from "../context/GlobalContext";
 
 const Header = () => {
   const { breakpoint } = useContext(GlobalContext);
 
   return (
-    <nav className="fixed w-16 text-white flex flex-col justify-center">
+    <nav
+      className="fixed w-16 text-white flex flex-col justify-center"
+      style={{ zIndex: 5 }}
+    >
       <ul className="list-none p-4 m-4 flex flex-col items-center font-iceland">
         <li className="w-full text-center py-3 cursor-pointer">
           {breakpoint("mobile") ? (

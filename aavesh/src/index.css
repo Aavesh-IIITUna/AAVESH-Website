@@ -32,3 +32,8 @@ body {
   transform: rotate(180deg);
   white-space: nowrap;
 }
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+}

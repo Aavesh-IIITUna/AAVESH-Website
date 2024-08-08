@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import RoboArm from "./components/RoboArm";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
       <Header />
-      <RoboArm />
+      <Hero />
     </>
   );
 }
