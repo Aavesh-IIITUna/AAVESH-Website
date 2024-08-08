@@ -17,7 +17,7 @@ export default function RoboArm() {
   return (
     <main style={{ height: modelSize.height, width: modelSize.width }} className='p-0'>
       <Spline
-        scene="https://prod.spline.design/hSmgWuXmrz33MwZn/scene.splinecode"
+        scene="https://prod.spline.design/UTI28fXxLxIml8Lv/scene.splinecode"
       />
     </main>
   );
