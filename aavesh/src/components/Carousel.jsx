@@ -1,7 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const Carousel = () => {
-  const totalSlides = 3; // Variable to define the number of slides
+  const slides = [
+    {
+      title: "First Slide Label",
+      content: "Some representative placeholder content for the first slide.",
+      img: "https://via.placeholder.com/300",
+    },
+    {
+      title: "Second Slide Label",
+      content: "Some representative placeholder content for the second slide.",
+      img: "https://via.placeholder.com/300",
+    },
+    {
+      title: "Third Slide Label",
+      content: "Some representative placeholder content for the third slide.",
+      img: "https://via.placeholder.com/300",
+    },
+  ];
+
+  const totalSlides = slides.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -37,95 +56,24 @@ const Carousel = () => {
         ref={carouselRef}
         className="flex transition-transform duration-500 ease-in-out"
       >
-        {/* Slide 1 */}
-        <div className="min-w-full flex flex-col items-center justify-center bg-gray-100 py-8 px-4">
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">First Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="min-w-full flex flex-col items-center justify-center bg-gray-800 py-8 px-4"
+          >
+            <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg shadow-lg overflow-hidden text-white">
+              <img
+                src={slide.img}
+                alt={`${slide.title} image`}
+                className="w-full md:w-1/2 h-auto object-cover"
+              />
+              <div className="p-6 md:w-1/2">
+                <h2 className="text-2xl font-bold mb-4">{slide.title}</h2>
+                <p className="text-gray-300">{slide.content}</p>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">First Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Slide 2 */}
-        <div className="min-w-full flex flex-col items-center justify-center bg-gray-100 py-8 px-4">
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Second Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Second Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Slide 3 */}
-        <div className="min-w-full flex flex-col items-center justify-center bg-gray-100 py-8 px-4">
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Third Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 md:w-1/2">
-              <h2 className="text-2xl font-bold mb-4">Third Slide Label</h2>
-              <p className="text-gray-600">
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-            <img
-              src="https://via.placeholder.com/300"
-              alt="First Slide"
-              className="w-full md:w-1/2 h-auto object-cover"
-            />
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Navigation Buttons */}
@@ -133,13 +81,13 @@ const Carousel = () => {
         onClick={prevSlide}
         className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white"
       >
-        Prev
+        <FaArrowLeft size={20} />
       </button>
       <button
         onClick={nextSlide}
         className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-800 text-white"
       >
-        Next
+        <FaArrowRight size={20} />
       </button>
     </div>
   );
