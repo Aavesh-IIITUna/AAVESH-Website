@@ -30,46 +30,11 @@ const Hero = () => {
   }, [text, isDeleting, index, words]);
 
   const randomWords = [
-    {
-      word: "Imagination",
-      style: {
-        top: "55%",
-        left: "10%",
-        opacity: 0.7,
-      },
-    },
-    {
-      word: "Innovation",
-      style: {
-        top: "30%",
-        left: "15%",
-        opacity: 0.8,
-      },
-    },
-    {
-      word: "Implementations",
-      style: {
-        top: "80%",
-        left: "25%",
-        opacity: 0.6,
-      },
-    },
-    {
-      word: "Electronics",
-      style: {
-        top: "35%",
-        left: "75%",
-        opacity: 0.9,
-      },
-    },
-    {
-      word: "Cultured",
-      style: {
-        top: "65%",
-        left: "70%",
-        opacity: 0.5,
-      },
-    },
+    { word: "Imagination", style: { top: "55%", left: "10%" } },
+    { word: "Innovation", style: { top: "30%", left: "15%" } },
+    { word: "Implementations", style: { top: "80%", left: "25%" } },
+    { word: "Electronics", style: { top: "35%", left: "75%" } },
+    { word: "Cultured", style: { top: "65%", left: "70%" } },
   ];
 
   return (
@@ -88,7 +53,7 @@ const Hero = () => {
         <div
           key={i}
           style={{ position: "absolute", ...item.style }}
-          className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold font-iceland"
+          className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold font-iceland animate-floatAndFade"
         >
           {item.word}
         </div>
