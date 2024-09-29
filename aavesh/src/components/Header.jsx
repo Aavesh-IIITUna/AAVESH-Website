@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import {
   FaHome,
   FaUser,
@@ -6,6 +7,7 @@ import {
   FaEnvelope,
   FaCalendarAlt,
   FaHandsHelping,
+  FaUsers,
 } from "react-icons/fa";
 import GlobalContext from "../context/GlobalContext";
 
@@ -38,6 +40,15 @@ const Header = () => {
           ) : (
             <span className="vertical-text text-3xl">Events</span>
           )}
+        </li>
+        <li className="w-full text-center py-3 cursor-pointer">
+          <Link to="/team">
+            {breakpoint("mobile") ? (
+              <FaUsers size={24} />
+            ) : (
+              <span className="vertical-text text-3xl">Team Aavesh</span>
+            )}
+          </Link>
         </li>
         <li className="w-full text-center py-3 cursor-pointer">
           {breakpoint("mobile") ? (

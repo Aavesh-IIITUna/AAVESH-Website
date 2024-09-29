@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LoadingScreen from "./components/Loadingscreen";
 import { useState } from "react";
+import Home from "./pages/Home";
+import TeamPage from "./pages/TeamPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -15,11 +18,13 @@ const App = () => {
     <div className="relative">
       {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {!loading && (
-        <div className="main-content">
-          <Header />
-          <Hero />
-          <Carousel />
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/team' element={<TeamPage />} />
+            <Route path='/carousel' element={<Carousel />} />
+          </Routes>
+        </BrowserRouter>
       )}
     </div>
   );
