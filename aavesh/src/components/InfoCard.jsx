@@ -1,4 +1,3 @@
-import React from "react";
 
 const InfoCard = ({ image, position, name, email }) => {
   return (
