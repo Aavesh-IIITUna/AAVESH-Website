@@ -1,21 +1,33 @@
-import Home  from "./pages/Home";
-// import Carousel from "./components/Carousel";
-// import Header from "./components/Header";
-// import Hero from "./components/Hero";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Carousel from "./components/Carousel";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import LoadingScreen from "./components/Loadingscreen";
+import { useState } from "react";
+import Home from "./pages/Home";
 import TeamPage from "./pages/TeamPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
+
   return (
-    <>
-    <BrowserRouter>
-      <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/team' element={<TeamPage />} />
-      </Routes>
-    </BrowserRouter>
-    </>
+    <div className="relative">
+      {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
+      {!loading && (
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/team' element={<TeamPage />} />
+            <Route path='/carousel' element={<Carousel />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </div>
   );
-}
+};
 
 export default App;
