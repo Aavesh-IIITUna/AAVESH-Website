@@ -1,10 +1,10 @@
 
-const InfoCard = ({ image, position, name, email }) => {
+const InfoCard = ({ name, position, email, imageUrl}) => {
   return (
-    <div className="bg-gray-800 text-white flex flex-col items-center justify-center py-4 px-3 rounded-xl shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+    <div className="bg-black text-white flex flex-col items-center justify-center py-4 px-3 rounded-xl shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto card">
       <div className="bg-gray-900 flex flex-col items-center rounded-xl shadow-md overflow-hidden w-full">
         <img
-          src={image}
+          src={imageUrl}
           alt={`${name}'s profile`}
           className="w-full h-40 sm:h-48 object-cover"
         />

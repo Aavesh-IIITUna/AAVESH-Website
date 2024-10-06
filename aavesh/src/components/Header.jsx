@@ -21,11 +21,13 @@ const Header = () => {
     >
       <ul className="list-none p-4 m-4 flex flex-col items-center font-iceland">
         <li className="w-full text-center py-3 cursor-pointer">
+        <Link to="/">
           {breakpoint("mobile") ? (
             <FaHome size={24} />
           ) : (
             <span className="vertical-text text-3xl">Home</span>
           )}
+        </Link>
         </li>
         <li className="w-full text-center py-3 cursor-pointer">
           {breakpoint("mobile") ? (
@@ -46,7 +48,7 @@ const Header = () => {
             {breakpoint("mobile") ? (
               <FaUsers size={24} />
             ) : (
-              <span className="vertical-text text-3xl">Team Aavesh</span>
+              <span className="vertical-text text-3xl">Team</span>
             )}
           </Link>
         </li>

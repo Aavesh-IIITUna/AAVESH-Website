@@ -50,7 +50,7 @@ const Carousel = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+    <div className="relative w-full max-w-4xl mx-auto overflow-hidden my-12">
       {/* Carousel Wrapper */}
       <div
         ref={carouselRef}
@@ -59,7 +59,7 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="min-w-full flex flex-col items-center justify-center bg-gray-800 py-8 px-4"
+            className="min-w-full flex flex-col items-center justify-center bg-black py-8 px-4"
           >
             <div className="flex flex-col md:flex-row bg-gray-900 rounded-lg shadow-lg overflow-hidden text-white">
               <img

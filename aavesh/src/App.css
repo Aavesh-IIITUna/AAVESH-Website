@@ -1,0 +1,21 @@
+::-webkit-scrollbar{
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: gray;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: rgb(8, 145, 178);
+    border-radius: 10px;
+  }
+
+  .mask{
+    background: rgba(0,0,0, 0.8);
+  }
+
+  .logo{
+    object-fit: cover;
+    object-position: 100% 50%;
+  }

@@ -1,5 +1,9 @@
-import { useState, useEffect } from "react";
-import RoboArm from "./RoboArm";
+import { useState, useEffect, Suspense } from "react";
+import React from "react";
+import logo from "../assets/AAVESH_B_WBG.svg";
+
+// Lazy load the RoboArm component
+const RoboArm = React.lazy(() => import("./RoboArm"));
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -39,9 +43,11 @@ const Hero = () => {
 
   return (
     <div className="h-screen overflow-hidden relative">
-      <RoboArm />
+      <Suspense fallback={<div>Loading Animation...</div>}>
+        <RoboArm />
+      </Suspense>
       <div className="absolute top-5 right-5">
-        <img src="logo.png" alt="Logo" className="w-40 md:w-52" />
+        <img src={logo} alt="Logo" className="w-40 md:w-52 logo" />
       </div>
       <div className="absolute top-24 left-1/2 font-extrabold transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
         <span className="text-4xl md:text-5xl mb-4 font-iceland">We </span>

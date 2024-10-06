@@ -1,14 +1,24 @@
-import React from 'react'
 import Carousel from "../components/Carousel";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
+import About from "../components/About"
+// import InfoCard from "../components/InfoCard";
+import Sponsors from "../components/Sponsors";
+
+
 
 const Home = () => {
   return (
     <>
-       <Header />
       <Hero />
+      <About/>
       <Carousel/>
+      {/* <InfoCard
+        image={dummyData.image}
+        name={dummyData.name}
+        position={dummyData.position}
+        email={dummyData.email}
+      /> */}
+      <Sponsors/>
     </>
   )
 }

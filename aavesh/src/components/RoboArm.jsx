@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import Spline from '@splinetool/react-spline';
 import GlobalContext from '../context/GlobalContext';
+import { memo } from 'react';
 
-export default function RoboArm() {
+const RoboArm = () => {
   const { breakpoint } = useContext(GlobalContext);
 
   const isMobile = breakpoint('mobile');
@@ -21,4 +22,7 @@ export default function RoboArm() {
       />
     </main>
   );
-}
+};
+
+// Memoize the component to avoid unnecessary re-renders
+export default memo(RoboArm);

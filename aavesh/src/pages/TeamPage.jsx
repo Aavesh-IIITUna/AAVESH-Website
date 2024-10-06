@@ -1,4 +1,3 @@
-import React from "react";
 import InfoCard from "../components/InfoCard";
 import { prez, members } from "../Members";
 
@@ -24,7 +23,7 @@ const TeamPage = () => {
       </div>
 
       {/* Horizontal Line */}
-      <div className="w-full mb-6">
+      <div className="w-[90%] mb-6">
         <div className="h-1 bg-cyan-500"></div>
       </div>
 
@@ -42,7 +41,7 @@ const TeamPage = () => {
       </div>
 
       {/* Horizontal Line */}
-      <div className="w-full mb-6">
+      <div className="w-[90%] mb-6">
         <div className="h-1 bg-cyan-500"></div>
       </div>
 

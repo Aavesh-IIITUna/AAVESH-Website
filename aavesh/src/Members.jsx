@@ -3,7 +3,13 @@ export const members = [
       name: "Aryan Singh",
       position: "Design Lead",
       email: "22117@iiitu.ac.in",
-      imageUrl: "https://drive.google.com/open?id=1f0nRwJ3hfPpd1EpM3ndnqNJ6GXCjtMka"
+      imageUrl: "https://drive.google.com/uc?export=view&id=1f0nRwJ3hfPpd1EpM3ndnqNJ6GXCjtMka"
+    },
+    {
+      name:"Aaditya Pandey",
+      position:"Volunteer",
+      email:"22201@iiitu.ac.in",
+      imageUrl: ""
     },
     {
       name: "Vaibhav Madaan",
@@ -11,12 +17,6 @@ export const members = [
       email: "22259@iiitu.ac.in",
       imageUrl: ""
       
-  },
-  {
-    name:"Aaditya Pandey",
-    position:"Volunteer",
-    email:"22201@iiitu.ac.in",
-    imageUrl: ""
   },
     {
         name: "Krish Choudhary",

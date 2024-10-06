@@ -1,12 +1,12 @@
 
 const About = () => {
   return (
-    <div className='w-full bg-black flex flex-col lg:flex-row justify-evenly items-center relative'>
+    <div className='w-full bg-black flex flex-col lg:flex-row justify-evenly items-center relative ml-10 my-12'>
       <div className="first mb-4 lg:mb-0 flex flex-col gap-10 lg:mr-72 w-full lg:w-1/3 relative">
-        <img src='./try.webp' alt="Electronics Image" className='w-full h-auto' />
-        <img src='./try2.webp' alt="Electronics Image" className='w-full h-auto' />
+        <div className="mask"><img src='./try.webp' alt="Electronics Image" className='w-full h-auto' /></div>
+        <div className="mask"><img src='./try2.webp' alt="Electronics Image" className='w-full h-auto' /></div>
       </div>
-      <div className="second relative text-white w-full lg:w-1/3 text-center lg:text-left z-10 lg:absolute lg:top-1/4 lg:translate-y-[-20%]">
+      <div className="second relative text-white w-full lg:w-1/3 text-center lg:text-left z-10 lg:absolute lg:top-1/4 lg:translate-y-[-20%] mask rounded-3xl p-8">
         <p className='font-sans text-2xl mb-2 text-center mr-20 md:text-xl '>WE ARE</p>
         <p className='text-4xl md:text-3xl font-bold mb-2 text-cyan-400 text-center ml-20'>AAVESH</p>
         <p className='text-xl md:text-lg text-center'>- ELECTRONICS & TECH SOCIETY -</p>

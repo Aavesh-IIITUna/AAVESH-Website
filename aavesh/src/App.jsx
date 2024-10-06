@@ -1,8 +1,7 @@
 import Carousel from "./components/Carousel";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Sponsors from "./components/Sponsors";
+import "./App.css"
+
 import LoadingScreen from "./components/Loadingscreen";
 import { useState } from "react";
 import Home from "./pages/Home";
@@ -21,6 +20,7 @@ const App = () => {
       {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {!loading && (
         <BrowserRouter>
+        <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/team' element={<TeamPage />} />
