@@ -20,4 +20,8 @@ To get a local copy of the project up and running, follow these steps:
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/Aavesh-IIITU-2024/AAVESH-Website.git
+   git clone https://github.com/Aavesh-IIITU/AAVESH-Website.git
+
+2. **Follow the figma file**
+
+   [Figma File](https://www.figma.com/design/yiAIT3gyBix05881Xhn2MY/AAVESH?node-id=0-1)
