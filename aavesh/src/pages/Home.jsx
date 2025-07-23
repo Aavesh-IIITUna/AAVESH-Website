@@ -6,6 +6,7 @@ import Header from "../components/Header";
 // import InfoCard from "../components/InfoCard";
 import Sponsors from "../components/Sponsors";
 import Gallery from "../components/Gallery";
+import SocialMediaFeeds from "../components/SocialMediaFeeds";
 
 
 
@@ -32,6 +33,7 @@ const Home = () => {
         email={dummyData.email}
       /> */}
       <Sponsors/>
+      <SocialMediaFeeds />
     </>
   )
 }

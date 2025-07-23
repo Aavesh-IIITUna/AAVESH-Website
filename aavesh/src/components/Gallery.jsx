@@ -67,7 +67,7 @@ const Gallery = () => {
             
             {/* The actual text, centered */}
             <div className="self-center">
-              <h1 className="text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
+              <h1 className="text-6xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
                 Gallery
               </h1>
             </div>
