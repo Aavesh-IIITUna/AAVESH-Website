@@ -1,5 +1,4 @@
 import Carousel from "./components/Carousel";
-import Header from "./components/Header";
 import "./App.css"
 
 import LoadingScreen from "./components/Loadingscreen";
@@ -20,16 +19,11 @@ const App = () => {
       {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {!loading && (
         <BrowserRouter>
-          <div className="flex">
-            <Header />
-            <div className="flex-1">
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/team' element={<TeamPage />} />
-                <Route path='/carousel' element={<Carousel />} />
-              </Routes>
-            </div>
-          </div>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/team' element={<TeamPage />} />
+            <Route path='/carousel' element={<Carousel />} />
+          </Routes>
         </BrowserRouter>
       )}
     </div>
