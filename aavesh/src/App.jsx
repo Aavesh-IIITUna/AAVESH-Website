@@ -20,12 +20,16 @@ const App = () => {
       {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {!loading && (
         <BrowserRouter>
-        <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/team' element={<TeamPage />} />
-            <Route path='/carousel' element={<Carousel />} />
-          </Routes>
+          <div className="flex">
+            <Header />
+            <div className="flex-1">
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/team' element={<TeamPage />} />
+                <Route path='/carousel' element={<Carousel />} />
+              </Routes>
+            </div>
+          </div>
         </BrowserRouter>
       )}
     </div>

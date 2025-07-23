@@ -1,7 +1,7 @@
 
 const Sponsors = () => {
     return (
-        <div className='text-white min-h-screen flex flex-col items-center justify-center ml-10'>
+        <div className='text-white min-h-screen flex flex-col items-center justify-center'>
             <h1 className='text-4xl my-10 text-center md:text-5xl'>SPONSORS</h1>
             <div className='flex  items-center w-full px-4 md:px-8'>
                 <div className='flex flex-col gap-10 w-full md:gap-20 md:w-[70%]'>
