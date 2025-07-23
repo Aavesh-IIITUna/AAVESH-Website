@@ -5,6 +5,7 @@ import About from "../components/About"
 import Header from "../components/Header";
 // import InfoCard from "../components/InfoCard";
 import Sponsors from "../components/Sponsors";
+import Gallery from "../components/Gallery";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
       <About/>
       <Carousel/>
       <WhatWeDo />
+      <Gallery />
       {/* <InfoCard
         image={dummyData.image}
         name={dummyData.name}
