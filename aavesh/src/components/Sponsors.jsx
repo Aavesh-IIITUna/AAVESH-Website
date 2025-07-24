@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types';
+import { SPONSORS } from '../constants/sponsors';
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
@@ -18,28 +19,7 @@ const DecoratorLinesFirst = ({ className }) => (
 DecoratorLinesFirst.propTypes = {
   className: PropTypes.string,
 };
-const sponsors = [
-  {
-    id: 1,
-    name: 'Sponsor 1',
-    style: { top: '20%', left: '20%' },
-  },
-  {
-    id: 2,
-    name: 'Sponsor 2',
-    style: { top: '10%', left: '60%' },
-  },
-  {
-    id: 3,
-    name: 'Sponsor 3',
-    style: { top: '45%', left: '45%' },
-  },
-  {
-    id: 4,
-    name: 'Sponsor 4',
-    style: { top: '60%', left: '70%' },
-  },
-];
+// sponsors now imported from constants
 
 
 const Sponsors = () => {
@@ -77,7 +57,7 @@ const Sponsors = () => {
               className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 bg-black/20"></div>
-            {sponsors.map(sponsor => (
+            {SPONSORS.map(sponsor => (
               <div 
                 key={sponsor.id} 
                 className="absolute w-32 h-32 md:w-40 md:h-40 transform skew-y-6"

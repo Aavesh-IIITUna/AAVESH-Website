@@ -1,17 +1,7 @@
+import { marqueeDataTop, marqueeDataBottom } from '../constants/whatWeDo'; // Import static data from constants
+
+
 import { useState, useRef } from 'react';
-
-
-const marqueeDataTop = [
-  { id: 1, text: 'STOCKS MANTHAN', image: 'https://images.pexels.com/photos/7848820/pexels-photo-7848820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 2, text: 'BUSINESS DEVELOPMENT', image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 3, text: 'INNOVATION HUB', image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-];
-
-const marqueeDataBottom = [
-  { id: 4, text: 'STORAGE WARS', image: 'https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 5, text: 'MARKET ANALYSIS', image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-  { id: 6, text: 'PRODUCT STRATEGY', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
-];
 
 
 const marqueeStyles = `

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { GALLERY_ITEMS } from '../constants/gallery';
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
@@ -17,24 +18,7 @@ const DecoratorLinesFirst = ({ className }) => (
 DecoratorLinesFirst.propTypes = {
   className: PropTypes.string,
 };
-const galleryItems = [
-  {
-    id: 1,
-    type: 'image',
-    src: 'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  },
-  {
-    id: 2,
-    type: 'image',
-    src: 'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  },
-  {
-    id: 3,
-    type: 'text',
-    title: 'Meraki - 2025',
-    backgroundImage: 'https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-  },
-];
+// galleryItems now imported from constants
 const Gallery = () => {
   return (
     <>
@@ -64,7 +48,7 @@ const Gallery = () => {
         </header>
         <main className="w-full max-w-5xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {galleryItems.map(item => (
+            {GALLERY_ITEMS.map(item => (
               <div key={item.id} className="aspect-video rounded-md overflow-hidden cursor-pointer group">
                 {item.type === 'image' ? (
                   <div className="relative w-full h-full">
