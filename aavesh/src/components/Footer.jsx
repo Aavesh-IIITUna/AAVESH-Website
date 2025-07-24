@@ -18,10 +18,10 @@ const Footer = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE || "",
-        process.env.REACT_APP_TEMPLATE || "",
+        import.meta.env.VITE_REACT_APP_SERVICE || "",
+        import.meta.env.VITE_REACT_APP_TEMPLATE || "",
         e.currentTarget,
-        process.env.REACT_APP_USER || ""
+        import.meta.env.VITE_REACT_APP_USER || ""
       )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -80,7 +80,7 @@ const Footer = () => {
             />
             <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
             <h2 className="text-5xl md:text-7xl font-iceland font-bold m-2">
-              LET'S CONNECT!
+              LET&apos;S CONNECT!
             </h2>
             <form
               onSubmit={handleSubmit}

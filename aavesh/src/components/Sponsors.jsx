@@ -1,31 +1,23 @@
 
 import PropTypes from 'prop-types';
-
-// --- Reusable SVG Components for the Header Decoration ---
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
     <path d="M8 6H70" stroke="currentColor" strokeWidth="1"/>
   </svg>
 );
-
 DecoratorCircleFirst.propTypes = {
   className: PropTypes.string,
 };
-
 const DecoratorLinesFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <path d="M0 6H62" stroke="currentColor" strokeWidth="1"/>
     <circle cx="66" cy="6" r="3.5" fill="currentColor"/>
   </svg>
 );
-
 DecoratorLinesFirst.propTypes = {
   className: PropTypes.string,
 };
-
-// --- Sample Data for the Sponsors ---
-// Using absolute positioning for a more accurate layout.
 const sponsors = [
   {
     id: 1,
@@ -50,11 +42,9 @@ const sponsors = [
 ];
 
 
-// --- Main App Component (Example Usage) ---
 const Sponsors = () => {
   return (
     <>
-      {/* Import the Iceland font from Google Fonts */}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
@@ -64,8 +54,6 @@ const Sponsors = () => {
         `}
       </style>
       <div className="flex flex-col items-center min-h-screen bg-black text-white p-4 md:p-8 font-iceland overflow-hidden">
-        
-        {/* --- Custom Sponsors Heading --- */}
         <header className="w-full max-w-5xl mb-12">
           <div className="inline-flex flex-col">
             <div className="self-start">
@@ -81,21 +69,14 @@ const Sponsors = () => {
             </div>
           </div>
         </header>
-
-        {/* --- Sponsors Display Area --- */}
         <main className="w-full h-[60vh] flex items-center justify-center">
-          {/* Skewed container for the tilted effect */}
           <div className="relative w-full max-w-5xl h-full transform -skew-y-6">
-            {/* Background Image */}
             <img 
               src="/public/armssp.jpg"
               alt="Background"
               className="absolute inset-0 w-full h-full object-cover opacity-40"
             />
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/20"></div>
-
-            {/* Sponsor Logos */}
             {sponsors.map(sponsor => (
               <div 
                 key={sponsor.id} 
@@ -109,10 +90,8 @@ const Sponsors = () => {
             ))}
           </div>
         </main>
-        
       </div>
     </>
   );
 }
-
 export default Sponsors;

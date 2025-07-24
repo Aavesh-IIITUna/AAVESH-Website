@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 
-// --- Sample Data for the Marquee ---
+
 const marqueeDataTop = [
   { id: 1, text: 'STOCKS MANTHAN', image: 'https://images.pexels.com/photos/7848820/pexels-photo-7848820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
   { id: 2, text: 'BUSINESS DEVELOPMENT', image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
@@ -13,7 +13,7 @@ const marqueeDataBottom = [
   { id: 6, text: 'PRODUCT STRATEGY', image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' },
 ];
 
-// --- CSS for the Marquee Animation ---
+
 const marqueeStyles = `
   @keyframes marquee-left {
     0% { transform: translateX(0%); }
@@ -36,7 +36,7 @@ const marqueeStyles = `
   }
 `;
 
-// --- Close Icon SVG ---
+
 const CloseIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -45,7 +45,6 @@ const CloseIcon = (props) => (
 );
 
 
-// --- The Main Component ---
 const WhatWeDo = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -60,7 +59,7 @@ const WhatWeDo = () => {
     const bottomEl = bottomMarqueeRef.current;
     if (!topEl || !bottomEl) return;
 
-    // Get the current transform value for both lines at the moment of the click
+
     const topStyle = window.getComputedStyle(topEl);
     const topMatrix = new DOMMatrixReadOnly(topStyle.transform);
     const currentTopX = topMatrix.m41;
@@ -69,13 +68,13 @@ const WhatWeDo = () => {
     const bottomMatrix = new DOMMatrixReadOnly(bottomStyle.transform);
     const currentBottomX = bottomMatrix.m41;
     
-    // Calculate the additional offset needed to center the clicked item
+
     const screenCenter = window.innerWidth / 2;
     const itemRect = event.currentTarget.getBoundingClientRect();
     const itemCenter = itemRect.left + itemRect.width / 2;
     const centeringOffset = screenCenter - itemCenter;
 
-    // Set the final transform values. The clicked line gets centered, the other just pauses.
+
     if (marqueeLine === 'top') {
       setTopOffset(currentTopX + centeringOffset);
       setBottomOffset(currentBottomX);
@@ -93,7 +92,6 @@ const WhatWeDo = () => {
     setIsPaused(false);
   };
 
-  // Duplicate content for seamless looping
   const topContent = [...marqueeDataTop, ...marqueeDataTop];
   const bottomContent = [...marqueeDataBottom, ...marqueeDataBottom];
 
@@ -106,7 +104,7 @@ const WhatWeDo = () => {
           <h1 className="text-5xl md:text-7xl font-light tracking-widest">What we do!</h1>
         </header>
 
-        {/* --- Marquee Container --- */}
+        
         <div className={`relative w-full marquee-container space-y-8 ${isPaused ? 'paused' : ''}`}>
           {/* Top Row */}
           <div className="overflow-hidden">
@@ -125,7 +123,7 @@ const WhatWeDo = () => {
               ))}
             </div>
           </div>
-          {/* Bottom Row */}
+
           <div className="overflow-hidden">
             <div 
               ref={bottomMarqueeRef}
@@ -144,7 +142,7 @@ const WhatWeDo = () => {
           </div>
         </div>
 
-        {/* --- Popped Out Image --- */}
+
         {selectedItem && (
           <div className="absolute z-10 p-2 bg-white rounded-md shadow-2xl shadow-black/50 -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <button onClick={handleCloseImage} className="absolute -top-3 -right-3 bg-black text-white rounded-full p-1.5 z-20 hover:bg-gray-700 transition-colors">

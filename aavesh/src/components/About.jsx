@@ -5,7 +5,7 @@ const About = () => {
         <div className='w-full max-w-7xl mx-auto'>
           <div className='relative flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16'>
             
-            {/* Left Image Column */}
+ 
             <div className="flex flex-col gap-8 w-full lg:w-1/2 max-w-2xl">
               <div className="mask overflow-hidden rounded-lg shadow-lg h-80">
                 <img src='./try.webp' alt="Electronics Image" className='w-full h-full object-cover transition-transform duration-300 hover:scale-105' />
@@ -15,7 +15,7 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right Image Column */}
+         
             <div className="flex flex-col gap-8 w-full lg:w-1/2 max-w-2xl">
               <div className="mask overflow-hidden rounded-lg shadow-lg h-80">
                 <img src='./try3.webp' alt="Electronics Image" className='w-full h-full object-cover transition-transform duration-300 hover:scale-105' />
@@ -48,7 +48,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Our Aim Section */}
+      
       <div className="bg-black flex items-center justify-center py-12 px-4">
         <div className="w-full max-w-5xl mx-auto">
           <div className="border-2 border-cyan-400 rounded-2xl p-8 lg:p-12 shadow-2xl bg-black/50 backdrop-blur-sm">

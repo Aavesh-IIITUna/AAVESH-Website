@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
-// --- Sample Data ---
-// In a real application, you would likely fetch this data from an API.
+
 const eventsData = [
   {
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -23,7 +22,7 @@ const eventsData = [
   },
 ];
 
-// --- Reusable SVG Icon Components ---
+
 const InstagramIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -46,35 +45,27 @@ const DownArrowIcon = (props) => (
     </svg>
 );
 
-// --- SVG Components for the Header Decoration ---
 
-// This component draws the decorator: O---LINE
-// eslint-disable-next-line react/prop-types
+
+
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    {/* A filled circle on the left */}
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
-    {/* A single line on the right */}
     <path d="M8 6H70" stroke="currentColor" strokeWidth="1"/>
   </svg>
 );
 
-// This component draws the decorator: LINE---O
-// eslint-disable-next-line react/prop-types
 const DecoratorLinesFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    {/* A single line on the left */}
     <path d="M0 6H62" stroke="currentColor" strokeWidth="1"/>
-    {/* A filled circle on the right */}
     <circle cx="66" cy="6" r="3.5" fill="currentColor"/>
   </svg>
 );
 
-// --- Main App Component ---
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // This function handles the logic for moving to the next event.
+  
   const handleNextEvent = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % eventsData.length);
   };
@@ -84,33 +75,27 @@ const Carousel = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-200 p-4 antialiased">
       
-      {/* --- Custom Heading Component --- */}
       <header className="w-full max-w-5xl mb-20">
         <div className="inline-flex flex-col">
-          {/* Top decorator, aligned left */}
           <div className="self-start">
             <DecoratorCircleFirst className="text-gray-400" />
           </div>
-          
-          {/* The actual text, centered */}
           <div className="self-center">
             <h1 className="text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
               Upcoming Events
             </h1>
           </div>
-          
-          {/* Bottom decorator, aligned right */}
           <div className="self-end">
             <DecoratorLinesFirst className="text-gray-400" />
           </div>
         </div>
       </header>
 
-      {/* --- Event Card --- */}
+   
       <main className="w-full max-w-5xl">
         <div className="bg-[#212121] rounded-lg shadow-2xl shadow-cyan-400/20 grid grid-cols-1 md:grid-cols-2 gap-x-10 items-start relative p-8 md:p-10">
             
-            {/* Image and Date/Social Column */}
+            
             <div className="flex flex-col md:-mt-16">
                 <img 
                     src={currentEvent.image} 
@@ -130,17 +115,14 @@ const Carousel = () => {
                 </div>
             </div>
 
-            {/* Text Content and Actions Column */}
+           
             <div className="flex flex-col h-full relative pb-16 pt-6 md:pt-0">
-                {/* Title and Description */}
                 <div className="flex-grow">
                     <h2 className="text-6xl font-bold text-white mb-4 uppercase">{currentEvent.title}</h2>
                     <p className="text-2xl text-gray-400 leading-relaxed">
                         {currentEvent.description}
                     </p>
                 </div>
-
-                {/* Arrow Button */}
                 <div className="absolute bottom-0 right-0">
                     <button 
                         onClick={handleNextEvent} 

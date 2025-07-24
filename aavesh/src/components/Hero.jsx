@@ -48,8 +48,8 @@ const Hero = () => {
           <RoboArm />
         </Suspense>
       </div>
-      <div className="absolute top-5 right-5 z-10">
-        <img src={logo} alt="Logo" className="w-40 md:w-52 logo" />
+      <div className="absolute top-0.5 right-4 z-10">
+        <img src={logo} alt="Logo" className="w-32 md:w-32 logo" />
       </div>
       <div className="absolute top-24 left-1/2 font-extrabold transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
         <span className="text-4xl md:text-5xl mb-4 font-iceland">We </span>

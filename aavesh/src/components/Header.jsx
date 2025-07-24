@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Fixed AAVESH Logo - Always Visible */}
+    
       <div 
         className="fixed top-4 left-4 z-50 cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
@@ -21,14 +21,14 @@ const Navbar = () => {
         <img 
           src={aaveshLogo} 
           alt="AAVESH Logo" 
-          className="h-16 w-16 object-cover rounded-full transition-transform duration-300 hover:scale-110"
+          className="h-16 w-16 top-4 object-cover rounded-full transition-transform duration-300 hover:scale-110"
         />
       </div>
 
-      {/* Mobile Menu Button */}
+    
       <button
         onClick={toggleSidebar}
-        className="md:hidden fixed top-4 right-4 z-50 bg-gray-900 text-white p-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-200"
+        className="md:hidden fixed top-6 right-4 z-50 bg-gray-900 text-white p-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-200"
         aria-label="Toggle navigation menu"
       >
         <div className="w-6 h-6 flex flex-col justify-center items-center">
@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </button>
 
-      {/* Overlay for mobile */}
+   
       {isOpen && (
         <div 
           className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -46,7 +46,7 @@ const Navbar = () => {
         ></div>
       )}
 
-      {/* Sliding Navbar - Hidden by default, appears on logo hover */}
+      
       <nav 
         className={`
           fixed top-0 left-0 w-72 h-screen text-white flex flex-col shadow-2xl z-40
