@@ -1,5 +1,4 @@
 import Carousel from "./components/Carousel";
-import Header from "./components/Header";
 import "./App.css"
 
 import LoadingScreen from "./components/Loadingscreen";
@@ -20,7 +19,6 @@ const App = () => {
       {loading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
       {!loading && (
         <BrowserRouter>
-        <Header />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/team' element={<TeamPage />} />

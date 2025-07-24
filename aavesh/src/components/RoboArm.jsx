@@ -10,13 +10,13 @@ const RoboArm = () => {
   const isTablet = breakpoint('tab');
 
   const modelSize = isMobile
-    ? { height: '100vh', width: '100vw' }
+    ? { height: '100vh', width: '100%' }
     : isTablet
-    ? { height: '100vh', width: '100vw' }
-    : { height: '100vh', width: '100vw' };
+    ? { height: '100vh', width: '100%' }
+    : { height: '100vh', width: '100%' };
 
   return (
-    <main style={{ height: modelSize.height, width: modelSize.width }} className='p-0'>
+    <main style={{ height: modelSize.height, width: modelSize.width }} className='p-0 flex justify-center items-center'>
       <Spline
         scene="https://prod.spline.design/UTI28fXxLxIml8Lv/scene.splinecode"
       />

@@ -42,14 +42,16 @@ const Hero = () => {
   ];
 
   return (
-    <div className="h-screen overflow-hidden relative">
-      <Suspense fallback={<div>Loading Animation...</div>}>
-        <RoboArm />
-      </Suspense>
-      <div className="absolute top-5 right-5">
-        <img src={logo} alt="Logo" className="w-40 md:w-52 logo" />
+    <div className="h-screen overflow-hidden relative w-full flex justify-center items-center">
+      <div className="absolute inset-0 flex justify-center items-center">
+        <Suspense fallback={<div>Loading Animation...</div>}>
+          <RoboArm />
+        </Suspense>
       </div>
-      <div className="absolute top-24 left-1/2 font-extrabold transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+      <div className="absolute top-0.5 right-4 z-10">
+        <img src={logo} alt="Logo" className="w-32 md:w-32 logo" />
+      </div>
+      <div className="absolute top-24 left-1/2 font-extrabold transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10">
         <span className="text-4xl md:text-5xl mb-4 font-iceland">We </span>
         <span className="text-4xl md:text-5xl text-cyan-600 mb-4 font-iceland">
           {text}
@@ -59,7 +61,7 @@ const Hero = () => {
         <div
           key={i}
           style={{ position: "absolute", ...item.style }}
-          className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold font-iceland animate-floatAndFade"
+          className="text-white text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold font-iceland animate-floatAndFade z-10"
         >
           {item.word}
         </div>
