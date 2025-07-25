@@ -1,5 +1,7 @@
-
+import React from 'react';
 import PropTypes from 'prop-types';
+
+// Decorator components remain the same
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
@@ -19,28 +21,12 @@ DecoratorLinesFirst.propTypes = {
   className: PropTypes.string,
 };
 const sponsors = [
-  {
-    id: 1,
-    name: 'Sponsor 1',
-    style: { top: '20%', left: '20%' },
-  },
-  {
-    id: 2,
-    name: 'Sponsor 2',
-    style: { top: '10%', left: '60%' },
-  },
-  {
-    id: 3,
-    name: 'Sponsor 3',
-    style: { top: '45%', left: '45%' },
-  },
-  {
-    id: 4,
-    name: 'Sponsor 4',
-    style: { top: '60%', left: '70%' },
-  },
+  { id: 1, name: 'Coca-Cola', imageUrl: '/coke.png', gridSize:`row-start-[4] col-start-[2] sm:row-start-[5] sm:col-start-[2]` },
+  { id: 2, name: 'Coca-Cola', imageUrl: '/coke.png', gridSize:`row-start-[3] col-start-[7] sm:row-start-[3] sm:col-start-[8]` },
+  { id: 3, name: 'Coca-Cola', imageUrl: '/coke.png', gridSize:`row-start-[7] col-start-[4] sm:row-start-[7] sm:col-start-[5]` },
+  { id: 4, name: 'Coca-Cola', imageUrl: '/coke.png', gridSize:`row-start-[8] col-start-[8] sm:row-start-[8] sm:col-start-[8]` },
 ];
-
+// --- CHANGE END ---
 
 const Sponsors = () => {
   return (
@@ -51,16 +37,24 @@ const Sponsors = () => {
           .font-iceland {
             font-family: 'Iceland', cursive;
           }
+          .trapezoid-skew {
+            clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 80%);
+          }
+          @media screen and (max-width: 640px){
+          .trapezoid-skew{
+            clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 85%);
+          }
+          }
         `}
       </style>
-      <div className="flex flex-col items-center min-h-screen bg-black text-white p-4 md:p-8 font-iceland overflow-hidden">
-        <header className="w-full max-w-5xl mb-12">
+      <div className="flex flex-col items-center bg-black text-white p-4 md:p-8 font-iceland overflow-hidden">
+        <header className="w-full max-w-5xl relative z-10">
           <div className="inline-flex flex-col">
             <div className="self-start">
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
             <div className="py-2 self-start">
-              <h1 className="text-6xl font-normal tracking-[0.3em] uppercase text-gray-200">
+              <h1 className="text-2xl sm:text-4xl font-normal tracking-[0.3em] uppercase text-gray-200">
                 Sponsors
               </h1>
             </div>
@@ -69,22 +63,29 @@ const Sponsors = () => {
             </div>
           </div>
         </header>
-        <main className="w-full h-[60vh] flex items-center justify-center">
-          <div className="relative w-full max-w-5xl h-full transform -skew-y-6">
-            <img 
-              src="/public/armssp.jpg"
-              alt="Background"
-              className="absolute inset-0 w-full h-full object-cover opacity-40"
-            />
-            <div className="absolute inset-0 bg-black/20"></div>
+
+        <main className="w-full h-[50vh] sm:h-[150vh]  flex items-center justify-center -mt-20">
+          <div className="relative w-full max-w-5xl h-full grid grid-cols-10 grid-rows-10 trapezoid-skew">
+            <div className="absolute inset-0 w-full bg-[#6E6D6DB2]">
+              <img
+                src="/armssp.jpg"
+                alt="Futuristic background"
+                className="absolute inset-0 w-full h-full object-cover opacity-30"
+                onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/1024x768/1a1a1a/4a4a4a?text=Image+Error'; }}
+              />
+            </div>
             {sponsors.map(sponsor => (
               <div 
                 key={sponsor.id} 
-                className="absolute w-32 h-32 md:w-40 md:h-40 transform skew-y-6"
-                style={sponsor.style}
+                className={`relative w-24 h-24 sm:w-56 sm:h-56 transform ${sponsor.gridSize}`}
               >
-                <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl shadow-black/50 bg-red-500 flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">{sponsor.name}</span>
+                <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl shadow-black/50">
+                  <img 
+                    src={sponsor.imageUrl} 
+                    alt={sponsor.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => { e.target.onerror = null; e.target.src=`https://placehold.co/160x160/cccccc/333333?text=Error`; }}
+                  />
                 </div>
               </div>
             ))}
@@ -94,4 +95,5 @@ const Sponsors = () => {
     </>
   );
 }
+
 export default Sponsors;
