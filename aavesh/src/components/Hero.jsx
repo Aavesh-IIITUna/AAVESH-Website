@@ -1,15 +1,15 @@
 import { useState, useEffect, Suspense } from "react";
 import React from "react";
 import logo from "../assets/AAVESH_B_WBG.svg";
+import { HERO_WORDS, HERO_RANDOM_WORDS } from '../constants/hero';
 
-// Lazy load the RoboArm component
 const RoboArm = React.lazy(() => import("./RoboArm"));
 
 const Hero = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const words = ["Code", "Collaborate", "Create"];
+  const words = HERO_WORDS;
 
   useEffect(() => {
     const handleTyping = () => {
@@ -33,13 +33,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, index, words]);
 
-  const randomWords = [
-    { word: "Imagination", style: { top: "55%", left: "10%" } },
-    { word: "Innovation", style: { top: "30%", left: "15%" } },
-    { word: "Implementations", style: { top: "80%", left: "25%" } },
-    { word: "Electronics", style: { top: "35%", left: "75%" } },
-    { word: "Cultured", style: { top: "65%", left: "70%" } },
-  ];
+  const randomWords = HERO_RANDOM_WORDS;
 
   return (
     <div className="h-screen overflow-hidden relative w-full flex justify-center items-center">
