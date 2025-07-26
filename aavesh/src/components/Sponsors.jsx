@@ -41,7 +41,7 @@ const Sponsors = () => {
           }
         `}
       </style>
-      <div className="flex flex-col items-center bg-black text-white p-4 md:p-8 font-iceland overflow-hidden">
+      <div className="flex flex-col items-center bg-black text-white py-4 md:py-8 font-iceland overflow-hidden">
         <header className="w-full max-w-5xl relative z-10">
           <div className="inline-flex flex-col">
             <div className="self-start">
@@ -59,7 +59,7 @@ const Sponsors = () => {
         </header>
 
         <main className="w-full h-[50vh] sm:h-[150vh]  flex items-center justify-center -mt-20">
-          <div className="relative w-full max-w-5xl h-full grid grid-cols-10 grid-rows-10 trapezoid-skew">
+          <div className="relative w-full h-full grid grid-cols-10 grid-rows-10 trapezoid-skew">
             <div className="absolute inset-0 w-full bg-[#6E6D6DB2]">
               <img
                 src="/armssp.jpg"
