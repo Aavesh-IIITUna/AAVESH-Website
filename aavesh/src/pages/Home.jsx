@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Sponsors from "../components/Sponsors";
 import Gallery from "../components/Gallery";
 import SocialMediaFeeds from "../components/SocialMediaFeeds";
+import OurAim from "../components/OurAim";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
       
       {/* Rest of the sections without navbar - full width */}
       <About/>
+      <OurAim/>
       <Carousel/>
       <WhatWeDo />
       <Gallery />
