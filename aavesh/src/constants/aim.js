@@ -1,0 +1,2 @@
+  export const originalValue = "The aim of AAVESH is to ignite a passion for technology and innovation among students by providing a dynamic platform for learning, experimentation, and collaboration. Through hands-on projects, workshops, and events, AAVESH empowers members to bridge theoretical knowledge with real-world applications, fostering creativity, critical thinking, and a drive to shape the future through technology.";
+  export const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+{}:\"<>?|[];',./";
