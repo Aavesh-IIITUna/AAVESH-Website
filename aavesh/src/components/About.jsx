@@ -3,7 +3,7 @@ const About = () => {
     <div className="w-full bg-black flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
 
       {/* Image Row with Center Heading */}
-      <div className="relative w-full max-w-7xl flex justify-between items-center gap-72 px-1 mb-24">
+      <div className="relative w-full max-w-7xl flex justify-between items-center gap-72 px-1 mb-12">
 
         {/* Left image */}
         <div className="w-1/2 h-[530px] overflow-hidden rounded-xl shadow-lg">
