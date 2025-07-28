@@ -89,7 +89,11 @@ const WhatWeDo = () => {
 
 
         {hoveredItem && (
-          <div className="absolute z-10 p-2 bg-white rounded-md shadow-2xl shadow-black/50 -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div 
+            className="absolute z-10 p-2 bg-white rounded-md shadow-2xl shadow-black/50 -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            onMouseEnter={() => handleItemHover(hoveredItem)}
+            onMouseLeave={handleItemLeave}
+          >
             <img
               src={hoveredItem.image}
               alt={hoveredItem.text}

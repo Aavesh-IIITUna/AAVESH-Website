@@ -48,7 +48,7 @@ const Sponsors = () => {
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
             <div className="py-2 self-start">
-              <h1 className="text-2xl sm:text-4xl font-normal tracking-[0.3em] uppercase text-gray-200">
+              <h1 className="text-2xl sm:text-4xl font-normal tracking-[0.1em] uppercase text-gray-200">
                 Sponsors
               </h1>
             </div>
