@@ -102,11 +102,11 @@ export default function OurAim() {
     <div className="w-full mx-auto mb-12">
       <main className="border-2 white rounded-lg h-48 mx-20 py-2 overflow-hidden">
         <h1 className="text-white text-4xl text-center font-bold mb-4">
-            Our Aim
+          Our Aim
         </h1>
         <div className="px-6 h-24 flex items-center justify-center">
-          <p 
-            className="text-center text-white cursor-pointer"
+          <p
+            className="text-center text-white text-xl md:text-2xl cursor-pointer"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
