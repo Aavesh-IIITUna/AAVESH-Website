@@ -35,7 +35,7 @@ const Home = () => {
         email={dummyData.email}
       /> */}
       <Sponsors/>
-      <SocialMediaFeeds />
+      {/* <SocialMediaFeeds /> */}
     </>
   )
 }
