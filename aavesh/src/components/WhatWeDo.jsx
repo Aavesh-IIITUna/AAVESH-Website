@@ -1,7 +1,7 @@
 import { marqueeDataTop, marqueeDataBottom } from '../constants/whatWeDo'; // Import static data from constants
 
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 
 const marqueeStyles = `
@@ -19,7 +19,7 @@ const marqueeStyles = `
   .animate-marquee-right {
     animation: marquee-right 40s linear infinite;
   }
-  /* Pause animation on hover, but only if not paused by a click */
+  /* Pause animation on hover, but only if not paused by a hover */
   .marquee-container:not(.paused):hover .animate-marquee-left,
   .marquee-container:not(.paused):hover .animate-marquee-right {
     animation-play-state: paused;
@@ -27,58 +27,17 @@ const marqueeStyles = `
 `;
 
 
-const CloseIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <line x1="18" y1="6" x2="6" y2="18"></line>
-    <line x1="6" y1="6" x2="18" y2="18"></line>
-  </svg>
-);
-
-
 const WhatWeDo = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
-  const [topOffset, setTopOffset] = useState(0);
-  const [bottomOffset, setBottomOffset] = useState(0);
 
-  const topMarqueeRef = useRef(null);
-  const bottomMarqueeRef = useRef(null);
-
-  const handleItemClick = (item, event, marqueeLine) => {
-    const topEl = topMarqueeRef.current;
-    const bottomEl = bottomMarqueeRef.current;
-    if (!topEl || !bottomEl) return;
-
-
-    const topStyle = window.getComputedStyle(topEl);
-    const topMatrix = new DOMMatrixReadOnly(topStyle.transform);
-    const currentTopX = topMatrix.m41;
-
-    const bottomStyle = window.getComputedStyle(bottomEl);
-    const bottomMatrix = new DOMMatrixReadOnly(bottomStyle.transform);
-    const currentBottomX = bottomMatrix.m41;
-    
-
-    const screenCenter = window.innerWidth / 2;
-    const itemRect = event.currentTarget.getBoundingClientRect();
-    const itemCenter = itemRect.left + itemRect.width / 2;
-    const centeringOffset = screenCenter - itemCenter;
-
-
-    if (marqueeLine === 'top') {
-      setTopOffset(currentTopX + centeringOffset);
-      setBottomOffset(currentBottomX);
-    } else {
-      setTopOffset(currentTopX);
-      setBottomOffset(currentBottomX + centeringOffset);
-    }
-
-    setSelectedItem(item);
+  const handleItemHover = (item) => {
+    setHoveredItem(item);
     setIsPaused(true);
   };
 
-  const handleCloseImage = () => {
-    setSelectedItem(null);
+  const handleItemLeave = () => {
+    setHoveredItem(null);
     setIsPaused(false);
   };
 
@@ -99,15 +58,13 @@ const WhatWeDo = () => {
           {/* Top Row */}
           <div className="overflow-hidden">
             <div 
-              ref={topMarqueeRef}
               className={`flex ${!isPaused ? 'animate-marquee-left' : ''}`}
-              style={{ 
-                transform: isPaused ? `translateX(${topOffset}px)` : 'none',
-                transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)'
-              }}
             >
               {topContent.map((item, index) => (
-                <div key={`top-${index}`} onClick={(e) => handleItemClick(item, e, 'top')} className="flex-shrink-0 mx-8 text-4xl md:text-6xl font-bold tracking-[0.2em] uppercase whitespace-nowrap cursor-pointer hover:text-teal-400 transition-colors duration-300">
+                <div key={`top-${index}`} 
+                     onMouseEnter={() => handleItemHover(item)} 
+                     onMouseLeave={handleItemLeave}
+                     className="flex-shrink-0 mx-8 text-4xl md:text-6xl font-bold tracking-[0.2em] uppercase whitespace-nowrap cursor-pointer hover:text-teal-400 transition-colors duration-300">
                   {item.text} <span className="text-teal-500 font-sans mx-4">&gt;</span>
                 </div>
               ))}
@@ -116,15 +73,13 @@ const WhatWeDo = () => {
 
           <div className="overflow-hidden">
             <div 
-              ref={bottomMarqueeRef}
               className={`flex ${!isPaused ? 'animate-marquee-right' : ''}`}
-              style={{ 
-                transform: isPaused ? `translateX(${bottomOffset}px)` : 'none',
-                transition: 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)'
-              }}
             >
               {bottomContent.map((item, index) => (
-                <div key={`bottom-${index}`} onClick={(e) => handleItemClick(item, e, 'bottom')} className="flex-shrink-0 mx-8 text-4xl md:text-6xl font-bold tracking-[0.2em] uppercase whitespace-nowrap cursor-pointer hover:text-teal-400 transition-colors duration-300">
+                <div key={`bottom-${index}`} 
+                     onMouseEnter={() => handleItemHover(item)} 
+                     onMouseLeave={handleItemLeave}
+                     className="flex-shrink-0 mx-8 text-4xl md:text-6xl font-bold tracking-[0.2em] uppercase whitespace-nowrap cursor-pointer hover:text-teal-400 transition-colors duration-300">
                   {item.text} <span className="text-teal-500 font-sans mx-4">&gt;</span>
                 </div>
               ))}
@@ -133,14 +88,15 @@ const WhatWeDo = () => {
         </div>
 
 
-        {selectedItem && (
-          <div className="absolute z-10 p-2 bg-white rounded-md shadow-2xl shadow-black/50 -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <button onClick={handleCloseImage} className="absolute -top-3 -right-3 bg-black text-white rounded-full p-1.5 z-20 hover:bg-gray-700 transition-colors">
-              <CloseIcon />
-            </button>
+        {hoveredItem && (
+          <div 
+            className="absolute z-10 p-2 bg-white rounded-md shadow-2xl shadow-black/50 -rotate-6 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            onMouseEnter={() => handleItemHover(hoveredItem)}
+            onMouseLeave={handleItemLeave}
+          >
             <img
-              src={selectedItem.image}
-              alt={selectedItem.text}
+              src={hoveredItem.image}
+              alt={hoveredItem.text}
               className="w-96 h-auto rounded"
               onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/200x150/000000/FFFFFF?text=Image'; }}
             />
