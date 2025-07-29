@@ -19,3 +19,12 @@
     object-fit: cover;
     object-position: 100% 50%;
   }
+
+  /* Ensure smooth scroll behavior */
+  html {
+    scroll-behavior: smooth !important;
+  }
+  
+  * {
+    scroll-behavior: smooth !important;
+  }

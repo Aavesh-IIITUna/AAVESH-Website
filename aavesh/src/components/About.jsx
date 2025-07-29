@@ -1,6 +1,8 @@
-const About = () => {
+import PropTypes from 'prop-types';
+
+const About = (props) => {
   return (
-    <div className="w-full bg-black flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
+    <div id={props.id} className="w-full bg-black flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
 
       {/* Image Row with Center Heading */}
       <div className="relative w-full max-w-7xl flex justify-between items-center gap-72 px-1 mb-12">
@@ -43,6 +45,10 @@ const About = () => {
       </div>
     </div>
   );
+};
+
+About.propTypes = {
+  id: PropTypes.string,
 };
 
 export default About;

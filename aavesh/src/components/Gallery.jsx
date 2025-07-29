@@ -20,7 +20,7 @@ DecoratorLinesFirst.propTypes = {
   className: PropTypes.string,
 };
 // galleryItems now imported from constants
-const Gallery = () => {
+const Gallery = (props) => {
   const [selectedAlbum, setSelectedAlbum] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -84,7 +84,7 @@ const Gallery = () => {
           }
         `}
       </style>
-      <div className="flex flex-col items-center min-h-screen bg-black text-white p-4 md:p-8 font-iceland">
+      <div id={props.id} className="flex flex-col items-center min-h-screen bg-black text-white p-4 md:p-8 font-iceland">
         <header className="w-full max-w-6xl mb-20">
           <div className="flex items-center justify-between">
             <div className="inline-flex flex-col">
@@ -232,4 +232,9 @@ const Gallery = () => {
     </>
   );
 };
+
+Gallery.propTypes = {
+  id: PropTypes.string,
+};
+
 export default Gallery;

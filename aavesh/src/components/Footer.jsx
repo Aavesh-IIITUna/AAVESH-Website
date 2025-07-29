@@ -1,9 +1,10 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import emailjs from "emailjs-com";
 import socials from "../Socials";
 import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = (props) => {
   const [user, setUser] = useState({
     name: "",
     message: "",
@@ -41,7 +42,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative  group">
+    <div id={props.id} className="relative  group">
       <motion.div
         variants={variants}
         initial="initial"
@@ -135,6 +136,10 @@ const Footer = () => {
       </div>
     </div>
   );
+};
+
+Footer.propTypes = {
+  id: PropTypes.string,
 };
 
 export default Footer;
