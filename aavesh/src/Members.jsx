@@ -35,27 +35,27 @@ export const CoreTeam = [
 export const Team = [
   {
     name: "Aryan Singh",
-    role: "Design Lead",
+    role: "content team",
     rollNo: "22XXX",
   },
   {
     name: "Aryan Singh",
-    role: "Design Lead",
+    role: "design team",
     rollNo: "22XXX",
   },
   {
     name: "Aryan Singh",
-    role: "Design Lead",
+    role: "Volunteer team",
     rollNo: "22XXX",
   },
   {
     name: "Aryan Singh",
-    role: "Design Lead",
+    role: "PR team",
     rollNo: "22XXX",
   },
   {
     name: "Aryan Singh",
-    role: "Design Lead",
+    role: "video-editing team",
     rollNo: "22XXX",
   },
 ];
