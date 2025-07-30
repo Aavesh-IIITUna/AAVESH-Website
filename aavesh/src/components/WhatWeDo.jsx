@@ -1,6 +1,5 @@
 import { marqueeDataTop, marqueeDataBottom } from '../constants/whatWeDo'; // Import static data from constants
-
-
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 
@@ -27,7 +26,7 @@ const marqueeStyles = `
 `;
 
 
-const WhatWeDo = () => {
+const WhatWeDo = (props) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -47,7 +46,7 @@ const WhatWeDo = () => {
   return (
     <>
       <style>{marqueeStyles}</style>
-      <div className="relative flex flex-col items-start justify-center bg-black text-white overflow-x-hidden p-4 md:py-12 md:px-24">
+      <div id={props.id} className="relative flex flex-col items-start justify-center bg-black text-white overflow-x-hidden p-4 md:py-12 md:px-24">
         
         <header className="w-full mb-16 md:mb-24">
           <h1 className="text-5xl md:text-7xl font-light tracking-widest">What we do!</h1>
@@ -106,5 +105,9 @@ const WhatWeDo = () => {
     </>
   );
 }
+
+WhatWeDo.propTypes = {
+  id: PropTypes.string,
+};
 
 export default WhatWeDo;

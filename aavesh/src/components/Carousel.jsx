@@ -49,7 +49,7 @@ DecoratorLinesFirst.propTypes = {
   className: PropTypes.string
 };
 
-const Carousel = () => {
+const Carousel = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNextEvent = () => {
@@ -59,7 +59,7 @@ const Carousel = () => {
   const currentEvent = EVENTS_DATA[currentIndex];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-200 p-4 antialiased">
+    <div id={props.id} className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-200 p-4 antialiased">
       
       <header className="w-full max-w-5xl mb-20">
         <div className="inline-flex flex-col">
@@ -124,6 +124,10 @@ const Carousel = () => {
       
     </div>
   );
+};
+
+Carousel.propTypes = {
+  id: PropTypes.string,
 };
 
 export default Carousel;

@@ -100,6 +100,18 @@ const Navbar = () => {
             </li>
             <li>
               <a 
+                href="#whatwedo"
+                onClick={() => setIsOpen(false)}
+                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+              >
+                <span className="font-medium font-iceland text-2xl">What We Do</span>
+                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a 
                 href="#gallery"
                 onClick={() => setIsOpen(false)}
                 className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"

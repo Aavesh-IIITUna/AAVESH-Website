@@ -22,7 +22,7 @@ DecoratorLinesFirst.propTypes = {
 };
 //sponsers now imported from constants
 
-const Sponsors = () => {
+const Sponsors = (props) => {
   return (
     <>
       <style>
@@ -41,7 +41,7 @@ const Sponsors = () => {
           }
         `}
       </style>
-      <div className="flex flex-col items-center bg-black text-white py-4 md:py-8 font-iceland overflow-hidden">
+      <div id={props.id} className="flex flex-col items-center bg-black text-white py-4 md:py-8 font-iceland overflow-hidden">
         <header className="w-full max-w-5xl relative z-10">
           <div className="inline-flex flex-col">
             <div className="self-start">
@@ -89,5 +89,9 @@ const Sponsors = () => {
     </>
   );
 }
+
+Sponsors.propTypes = {
+  id: PropTypes.string,
+};
 
 export default Sponsors;

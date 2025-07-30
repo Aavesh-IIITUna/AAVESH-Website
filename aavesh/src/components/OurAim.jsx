@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import { letters, originalValue } from '../constants/aim';
 
-export default function OurAim() {
+export default function OurAim(props) {
 
   // Generate initial scrambled text of the same length as the target text.
   const initialText = useMemo(() => {
@@ -9,7 +10,7 @@ export default function OurAim() {
       .split('')
       .map(() => letters[Math.floor(Math.random() * letters.length)])
       .join('');
-  }, [originalValue, letters]);
+  }, []); // Remove unnecessary dependencies
 
   const [displayText, setDisplayText] = useState(initialText);
   const [isHovering, setIsHovering] = useState(false);
@@ -99,7 +100,7 @@ export default function OurAim() {
   }, [isHovering, initialText]); // Rerun this effect when hover state changes.
 
   return (
-    <div className="w-full mx-auto mb-12">
+    <div id={props.id} className="w-full mx-auto mb-12">
       <main className="border-2 white rounded-lg h-48 mx-20 py-2 overflow-hidden">
         <h1 className="text-white text-4xl text-center font-bold mb-4">
           Our Aim
@@ -117,3 +118,7 @@ export default function OurAim() {
     </div>
   );
 }
+
+OurAim.propTypes = {
+  id: PropTypes.string,
+};

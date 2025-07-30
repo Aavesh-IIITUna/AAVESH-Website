@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalProvider>
       <App/>
-      <Footer/>
+      <Footer id="contact"/>
     </GlobalProvider>
   </React.StrictMode>,
 )
