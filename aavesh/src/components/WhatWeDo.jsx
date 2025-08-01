@@ -28,16 +28,16 @@ const marqueeStyles = `
 
 const WhatWeDo = (props) => {
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isTextHovered, setIsTextHovered] = useState(false);
 
   const handleItemHover = (item) => {
     setHoveredItem(item);
-    setIsPaused(true);
+    setIsTextHovered(true);
   };
 
   const handleItemLeave = () => {
     setHoveredItem(null);
-    setIsPaused(false);
+    setIsTextHovered(false);
   };
 
   const topContent = [...marqueeDataTop, ...marqueeDataTop];
@@ -53,11 +53,11 @@ const WhatWeDo = (props) => {
         </header>
 
         
-        <div className={`relative w-full marquee-container space-y-8 ${isPaused ? 'paused' : ''}`}>
+        <div className={`relative w-full marquee-container space-y-8${isTextHovered ? ' paused' : ''}`}>
           {/* Top Row */}
           <div className="overflow-hidden">
             <div 
-              className={`flex ${!isPaused ? 'animate-marquee-left' : ''}`}
+              className="flex animate-marquee-left"
             >
               {topContent.map((item, index) => (
                 <div key={`top-${index}`} 
@@ -72,7 +72,7 @@ const WhatWeDo = (props) => {
 
           <div className="overflow-hidden">
             <div 
-              className={`flex ${!isPaused ? 'animate-marquee-right' : ''}`}
+              className="flex animate-marquee-right"
             >
               {bottomContent.map((item, index) => (
                 <div key={`bottom-${index}`} 
