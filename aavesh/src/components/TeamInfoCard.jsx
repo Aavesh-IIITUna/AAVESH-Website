@@ -1,9 +1,9 @@
 const roleStyles = {
   "content team": "border-blue-500 bg-blue-900",
-  "volunteer team": "border-green-500 bg-green-900",
+  "volunteering team": "border-green-500 bg-green-900",
   "design team": "border-pink-500 bg-pink-900",
   "PR team": "border-yellow-500 bg-yellow-900",
-  "video-editing team": "border-purple-500 bg-purple-900",
+  "video editing team": "border-purple-500 bg-purple-900",
 };
 
 const TeamInfoCard = ({ name, rollNo, role }) => {

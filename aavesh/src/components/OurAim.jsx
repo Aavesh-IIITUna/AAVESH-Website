@@ -107,7 +107,7 @@ export default function OurAim(props) {
         </h1>
         <div className="px-6 h-24 flex items-center justify-center">
           <p
-            className="text-center text-white text-xl md:text-2xl cursor-pointer"
+            className="text-center text-white text-xl md:text-2xl cursor-pointer overflow-hidden"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
