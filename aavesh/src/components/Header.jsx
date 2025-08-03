@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import aaveshLogo from '../assets/AAVESH_LOGO.webp';
+import aaveshLogo from '../assets/AAVESH_LOGO.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
