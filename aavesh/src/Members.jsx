@@ -93,16 +93,102 @@ export const CoreTeam = [
 ];
 
 export const Team = [
+  // Volunteering Team
   {
     name: "Aryan Raj",
     role: "Volunteering Team",
     rollNo: "24113",
   },
   {
+    name: "Saksham Sangwan",
+    role: "Volunteering Team",
+    rollNo: "24157",
+  },
+  {
+    name: "Abhishek Nishad",
+    role: "Volunteering Team",
+    rollNo: "24202",
+  },
+  {
+    name: "Sheena",
+    role: "Volunteering Team",
+    rollNo: "24265",
+  },
+  {
+    name: "Manan Babbar",
+    role: "Volunteering Team",
+    rollNo: "24336",
+  },
+  {
+    name: "Pranav Pathak",
+    role: "Volunteering Team",
+    rollNo: "24350",
+  },
+  {
+    name: "Yuvraj Singh Chauhan",
+    role: "Volunteering Team",
+    rollNo: "24429",
+  },
+  // Content Team
+  {
     name: "Ashmeet Singh Sandhu",
     role: "Content Team",
     rollNo: "24114",
   },
+  {
+    name: "Ankush Sharma",
+    role: "Content Team",
+    rollNo: "24214",
+  },
+  {
+    name: "Mayank Joshi",
+    role: "Content Team",
+    rollNo: "24244",
+  },
+  {
+    name: "Gurparas Singh",
+    role: "Content Team",
+    rollNo: "24405",
+  },
+
+  // Design Team
+  {
+    name: "Arpita Singh",
+    role: "Design Team",
+    rollNo: "24216",
+  },
+  {
+    name: "Jayani Srivastava",
+    role: "Design Team",
+    rollNo: "24230",
+  },
+  {
+    name: "Kanishk Raturi",
+    role: "Design Team",
+    rollNo: "24231",
+  },
+  {
+    name: "Shashi Bhushan Raj",
+    role: "Design Team",
+    rollNo: "24264",
+  },
+  {
+    name: "Aditya Pandey",
+    role: "Design Team",
+    rollNo: "24305",
+  },
+  {
+    name: "Mayank",
+    role: "Design Team",
+    rollNo: "24338",
+  },
+  {
+    name: "Sundaram Gupta",
+    role: "Design Team",
+    rollNo: "24365",
+  },
+
+  // PR Team
   {
     name: "Mohammed Dilshad Ahmed",
     role: "PR Team",
@@ -119,54 +205,9 @@ export const Team = [
     rollNo: "24147",
   },
   {
-    name: "Rishik Uchadiya",
-    role: "Video editing Team",
-    rollNo: "24154",
-  },
-  {
-    name: "Saksham Sangwan",
-    role: "Volunteering Team",
-    rollNo: "24157",
-  },
-  {
-    name: "Yash Mishra",
-    role: "Video editing Team",
-    rollNo: "24176",
-  },
-  {
-    name: "Abhishek Nishad",
-    role: "Volunteering Team",
-    rollNo: "24202",
-  },
-  {
-    name: "Ankush Sharma",
-    role: "Content Team",
-    rollNo: "24214",
-  },
-  {
-    name: "Arpita Singh",
-    role: "Design Team",
-    rollNo: "24216",
-  },
-  {
     name: "Avadh Agarwal",
     role: "PR Team",
     rollNo: "24218",
-  },
-  {
-    name: "Jayani Srivastava",
-    role: "Design Team",
-    rollNo: "24230",
-  },
-  {
-    name: "Kanishk Raturi",
-    role: "Design Team",
-    rollNo: "24231",
-  },
-  {
-    name: "Kisan Rai",
-    role: "",
-    rollNo: "24235",
   },
   {
     name: "Maharth Kharbanda",
@@ -174,79 +215,14 @@ export const Team = [
     rollNo: "24242",
   },
   {
-    name: "Mayank Joshi",
-    role: "Content Team",
-    rollNo: "24244",
-  },
-  {
     name: "Piyush Kamra",
     role: "PR Team",
     rollNo: "24250",
   },
   {
-    name: "Raj Singh",
-    role: "Video editing Team",
-    rollNo: "24256",
-  },
-  {
-    name: "Shashi Bhushan Raj",
-    role: "Design Team",
-    rollNo: "24264",
-  },
-  {
-    name: "Sheena",
-    role: "Volunteering Team",
-    rollNo: "24265",
-  },
-  {
-    name: "Aditya Pandey",
-    role: "Design Team",
-    rollNo: "24305",
-  },
-  {
-    name: "Alok Sharma",
-    role: "Video editing Team",
-    rollNo: "24307",
-  },
-  {
     name: "Ayan Mishra",
     role: "PR Team",
     rollNo: "24314",
-  },
-  {
-    name: "Manan Babbar",
-    role: "Volunteering Team",
-    rollNo: "24336",
-  },
-  {
-    name: "Mayank",
-    role: "Design Team",
-    rollNo: "24338",
-  },
-  {
-    name: "Pranav Pathak",
-    role: "Volunteering Team",
-    rollNo: "24350",
-  },
-  {
-    name: "Shaurya",
-    role: "Video editing Team",
-    rollNo: "24363",
-  },
-  {
-    name: "Sundaram Gupta",
-    role: "Design Team",
-    rollNo: "24365",
-  },
-  {
-    name: "Gurparas Singh",
-    role: "Content Team",
-    rollNo: "24405",
-  },
-  {
-    name: "Yuvraj Singh Chauhan",
-    role: "Volunteering Team",
-    rollNo: "24429",
   },
   {
     name: "Rahul Chadak",
@@ -257,5 +233,39 @@ export const Team = [
     name: "Shristi",
     role: "PR Team",
     rollNo: "24522",
+  },
+
+  // Video Editing Team
+  {
+    name: "Rishik Uchadiya",
+    role: "Video editing Team",
+    rollNo: "24154",
+  },
+  {
+    name: "Yash Mishra",
+    role: "Video editing Team",
+    rollNo: "24176",
+  },
+  {
+    name: "Raj Singh",
+    role: "Video editing Team",
+    rollNo: "24256",
+  },
+  {
+    name: "Alok Sharma",
+    role: "Video editing Team",
+    rollNo: "24307",
+  },
+  {
+    name: "Shaurya",
+    role: "Video editing Team",
+    rollNo: "24363",
+  },
+
+  // No Role Specified
+  {
+    name: "Kisan Rai",
+    role: "",
+    rollNo: "24235",
   },
 ];
