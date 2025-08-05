@@ -8,6 +8,7 @@ import Sponsors from "../components/Sponsors";
 import Gallery from "../components/Gallery";
 // import SocialMediaFeeds from "../components/SocialMediaFeeds";
 import OurAim from "../components/OurAim";
+import Footer from "../components/Footer";
 
 
 
@@ -35,6 +36,7 @@ const Home = () => {
         email={dummyData.email}
       /> */}
       <Sponsors id="sponsors"/>
+      <Footer id="contact"/>
       {/* <SocialMediaFeeds id="contact" /> */}
     </>
   )

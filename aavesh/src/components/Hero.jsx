@@ -36,7 +36,7 @@ const Hero = () => {
   const randomWords = HERO_RANDOM_WORDS;
 
   return (
-    <div className="h-screen overflow-hidden relative w-full flex justify-center items-center">
+    <div id="home" className="h-screen overflow-hidden relative w-full flex justify-center items-center">
       <div className="absolute inset-0 flex justify-center items-center">
         <Suspense fallback={<div>Loading Animation...</div>}>
           <RoboArm />
