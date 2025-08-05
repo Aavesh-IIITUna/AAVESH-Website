@@ -3,92 +3,111 @@ export const CoreTeam = [
     name: "ANURAG TIWARI",
     position: "PRESIDENT",
     rollNo: "22209",
+    photourl: "/teamPhotos/anurag.jpg"
   },
   {
     name: "KRISH CHOUDHARY",
     position: "VICE PRESIDENT",
     rollNo: "22224",
+    photourl: "/teamPhotos/krish.JPG",
   },
   {
     name: "HARSHIT KASWAN",
     position: "TREASURER",
     rollNo: "22130",
+    photourl: "/teamPhotos/harshit.JPG",
+    
   },
 
   {
     name: "KAUSTUBH AGRAWAL",
     position: "CORE ADVISOR",
     rollNo: "22222",
+    photourl: "/teamPhotos/kaustubh.jpg",
   },
   {
     name: "PRANAV GARG",
     position: "SECRATARY",
     rollNo: "23346",
+    photourl: "/teamPhotos/pranav.jpg",
   },
   {
     name: "RISHAV RAJ",
     position: "SECRATARY",
     rollNo: "23241",
+    photourl: "/teamPhotos/rishav.jpg",
   },
   {
     name: "TANISHQ SINGH",
     position: "TECHNICAL HEAD",
     rollNo: "23362",
+    photourl: "/teamPhotos/tanishq.jpg",
   },
   {
     name: "DIVYANSH YADAV",
     position: "TECHNICAL HEAD",
     rollNo: "23315",
+    photourl: "/teamPhotos/divyansh.jpg",
   },
   {
     name: "MANMOHAN TRIPATHI",
     position: "INVENTORY HEAD",
     rollNo: "23262",
+    photourl: "/teamPhotos/mm.jpg",
   },
   {
     name: "SHUBHAM KUMAR",
     position: "INVENTORY HEAD",
     rollNo: "23262",
+    photourl: "/teamPhotos/shubham.jpg",
   },
   {
     name: "SRINIVAS PRABHU",
     position: "PR AND SOCIAL MEDIA",
     rollNo: "23251",
+    photourl: "/teamPhotos/srinivas.jpg",
   },
   {
     name: "UJJWAL MISHRA",
     position: "PR AND SOCIAL MEDIA",
     rollNo: "23162",
+    photourl: "/teamPhotos/ujjwal.jpg",
   },
   {
     name: "UTKARSH RAJPUT",
     position: "VIDEO EDITING HEAD",
     rollNo: "23257",
+    photourl: "/teamPhotos/utkarsh.jpg",
   },
   {
     name: "VINIT AGRAWAL",
     position: "CONTENT AND DESIGN HEAD",
     rollNo: "23260",
+    photourl: "/teamPhotos/vinit.jpg",
   },
   {
     name: "SRISHTI",
     position: "CONTENT AND DESIGN HEAD",
     rollNo: "23252",
+    photourl: "/teamPhotos/srishti.jpg"
   },
   {
     name: "GAURAV KUMAR",
     position: "RESEARCH HEAD",
     rollNo: "23318",
+    photourl: "/teamPhotos/gaurav.jpg",
   },
   {
     name: "VANSH VERMA",
     position: "DEVELOPMENT HEAD",
     rollNo: "23165",
+    photourl: "/teamPhotos/vansh.jpg",
   },
   {
     name: "JAYDEEP PARMAR",
     position: "VOLUNTEERING HEAD",
     rollNo: "23326",
+    photourl: "/teamPhotos/jaydeep.jpg",
   },
 ];
 
@@ -131,6 +150,21 @@ export const Team = [
   },
   // Content Team
   {
+    name: "Kanishka",
+    rollNo: "23228",
+    role: "Content team",
+  },
+  {
+    name: "Swayam",
+    rollNo: "23254",
+    role: "Content team",
+  },
+  {
+    name: "Rohit Kumar",
+    rollNo: "23350",
+    role: "Content team",
+  },
+  {
     name: "Ashmeet Singh Sandhu",
     role: "Content Team",
     rollNo: "24114",
@@ -152,6 +186,26 @@ export const Team = [
   },
 
   // Design Team
+  {
+    name: "Deepu",
+    rollNo: "23119",
+    role: "Design team",
+  },
+  {
+    name: "Chirag Jain",
+    rollNo: "23218",
+    role: "Design team",
+  },
+  {
+    name: "Sampurn Samadder",
+    rollNo: "23247",
+    role: "Design team",
+  },
+  {
+    name: "Divyesh",
+    rollNo: "23316",
+    role: "Design team",
+  },
   {
     name: "Arpita Singh",
     role: "Design Team",
@@ -190,7 +244,7 @@ export const Team = [
 
   // PR Team
   {
-    name: "Mohammed Dilshad Ahmed",
+    name: "Mohammed Dilshad",
     role: "PR Team",
     rollNo: "24140",
   },
@@ -263,6 +317,87 @@ export const Team = [
   },
 
   // No Role Specified
+   {
+    name: "Amrutansh Jha",
+    rollNo: "22107",
+    role: "",
+  },
+  {
+    name: "Aryan Singh",
+    rollNo: "22117",
+    role: "",
+  },
+  {
+    name: "Aaditya Pandey",
+    rollNo: "22201",
+    role: "",
+  },
+  {
+    name: "Chandraditya Parmar",
+    rollNo: "22215",
+    role: "",
+  },
+  {
+    name: "Sangharsh Verma",
+    rollNo: "22247",
+    role: "",
+  },
+  {
+    name: "Tisha Singh",
+    rollNo: "22256",
+    role: "",
+  },
+  {
+    name: "Vibhav Sharma",
+    rollNo: "22260",
+    role: "",
+  },
+  {
+    name: "Anant",
+    rollNo: "22309",
+    role: "",
+  },
+  {
+    name: "Anshika Arora",
+    rollNo: "22311",
+    role: "",
+  },
+  {
+    name: "Lal Krishna Gupta",
+    rollNo: "22334",
+    role: "",
+  },
+  {
+    name: "Palak Gupta",
+    rollNo: "22340",
+    role: "",
+  },
+  {
+    name: "Vivek Pal",
+    rollNo: "22363",
+    role: "",
+  },
+  // Second Year Team
+  {
+    name: "Rachit Jain",
+    rollNo: "23156",
+    role: "",
+  },
+  {
+    name: "Kumar Abhishek",
+    rollNo: "23230",
+    role: "",
+  },
+  {
+    name: "Girdhar Gopal",
+    rollNo: "23319",
+    role: "",
+  },
+  {
+    name: "Sajal Rastogi",
+    rollNo: "23353",
+    role: "",
+  },
   {
     name: "Kisan Rai",
     role: "",

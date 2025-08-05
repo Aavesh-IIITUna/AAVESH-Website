@@ -1,15 +1,23 @@
 export const GALLERY_ALBUMS = [
   {
+    id: 'memories-2025',
+    title: 'Memories 2025',
+    description: 'Memories from various events of this year',
+    coverImage: '/gallery/memories/MM15.webp',
+    images: [
+    ...Array.from({ length: 19 }, (_, i) => ({
+      id: i + 1,
+      src: `/gallery/memories/MM${i + 1}.webp`,
+      caption: 'Some beautiful memories'
+    }))
+    ]
+  },
+  {
     id: 'events-2025',
     title: 'Events 2025',
     description: 'Highlights from our events this year',
-    coverImage: '/gallery/events/MM15.webp',
+    coverImage: '/gallery/events/TT15.webp',
     images: [
-      ...Array.from({ length: 19 }, (_, i) => ({
-      id: i + 1,
-      src: `/gallery/events/MM${i + 1}.webp`,
-      caption: 'Memories from events in 2025'
-    })),
     ...Array.from({ length: 19 }, (_, i) => ({
       id: i + 19,
       src: `/gallery/events/TT${i + 1}.webp`,

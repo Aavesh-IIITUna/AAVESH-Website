@@ -8,7 +8,7 @@ const facultyCoordinator = {
   name: "Dr. Gurpreet Kaur",
   position: "Faculty Coordinator",
   rollNo: "Faculty SOE",
-  photourl: "/faculty.jpg", // make sure this image exists
+  photourl: "/gk.webp", // make sure this image exists
 };
 
 const TeamPage = () => {
