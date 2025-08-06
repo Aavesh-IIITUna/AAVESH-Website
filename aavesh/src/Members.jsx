@@ -148,6 +148,11 @@ export const Team = [
     role: "Volunteering Team",
     rollNo: "24429",
   },
+  {
+    name: "Deep Shekhar Singh",
+    role: "Volunteering Team",
+    rollNo: "24318",
+  },
   // Content Team
   {
     name: "Kanishka",

@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply text-default bg-default;
   font-family: 'Iceland', sans-serif;
