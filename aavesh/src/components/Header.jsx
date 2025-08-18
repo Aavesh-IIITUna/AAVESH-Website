@@ -4,7 +4,6 @@ import aaveshLogo from "../assets/AAVESH_LOGO.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,42 +39,19 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="fixed top-4 left-4 z-50 cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        className="absolute md:fixed top-4 left-4 z-50 cursor-pointer"
+        onClick={toggleSidebar}
+        role="button"
+        aria-label="Open navigation menu"
       >
         <img
           src={aaveshLogo}
           alt="AAVESH Logo"
-          className="h-16 w-16 top-4 object-cover rounded-full transition-transform duration-300 hover:scale-110"
+          className="h-10 w-10  md:h-14 md:w-14 mt-5 top-4 object-cover rounded-full transition-transform duration-300 hover:scale-110"
         />
       </div>
 
-      <button
-        onClick={toggleSidebar}
-        className="md:hidden fixed top-6 right-4 z-50 bg-gray-900 text-white p-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-200"
-        aria-label="Toggle navigation menu"
-      >
-        <div className="w-6 h-6 flex flex-col justify-center items-center">
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
-            }`}
-          ></span>
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></span>
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
-            }`}
-          ></span>
-        </div>
-      </button>
-
-      {isOpen && (
+  {isOpen && (
         <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={toggleSidebar}
@@ -86,13 +62,11 @@ const Navbar = () => {
         className={`
           fixed top-0 left-0 w-72 h-screen text-white flex flex-col shadow-2xl z-40
           transition-transform duration-500 ease-in-out
-          ${isHovered || isOpen ? "translate-y-0" : "-translate-y-full"}
+          ${isOpen ? "translate-y-0" : "-translate-y-full"}
         `}
         style={{
           background: "linear-gradient(to bottom, #121212 0%, #000000 100%)",
         }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
       >
         {/* Navigation Menu */}
         <div className="py-6 pt-24">
