@@ -41,14 +41,14 @@ const Sponsors = (props) => {
           }
         `}
       </style>
-      <div id={props.id} className="flex flex-col items-center bg-black text-white py-4 md:py-8 font-iceland overflow-hidden">
+  <div id={props.id} className="flex flex-col items-center bg-black text-white py-8 md:py-12 font-iceland overflow-hidden">
         <header className="w-full max-w-5xl relative z-10">
           <div className="inline-flex flex-col">
             <div className="self-start">
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
-            <div className="py-2 self-start">
-              <h1 className="text-2xl sm:text-4xl font-normal tracking-[0.1em] uppercase text-gray-200">
+            <div className=" mx-2 py-2 self-start">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-[0.1em] uppercase text-gray-200">
                 Sponsors
               </h1>
             </div>
@@ -58,7 +58,7 @@ const Sponsors = (props) => {
           </div>
         </header>
 
-        <main className="w-full h-[50vh] sm:h-[150vh]  flex items-center justify-center -mt-20">
+  <main className="w-full h-[60vh] sm:h-[120vh] flex items-center justify-center -mt-10 md:-mt-20">
           <div className="relative w-full h-full grid grid-cols-10 grid-rows-10 trapezoid-skew">
             <div className="absolute inset-0 w-full bg-[#6E6D6DB2]">
               <img
@@ -68,10 +68,10 @@ const Sponsors = (props) => {
                 onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/1024x768/1a1a1a/4a4a4a?text=Image+Error'; }}
               />
             </div>
-            {sponsors.map(sponsor => (
+      {sponsors.map(sponsor => (
               <div 
                 key={sponsor.id} 
-                className={`relative w-24 h-24 sm:w-56 sm:h-56 transform ${sponsor.gridSize}`}
+        className={`relative w-20 h-20 xs:w-24 xs:h-24 sm:w-48 sm:h-48 md:w-56 md:h-56 transform ${sponsor.gridSize}`}
               >
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl shadow-black/50">
                   <img 

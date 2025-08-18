@@ -61,13 +61,13 @@ const Carousel = (props) => {
   return (
     <div id={props.id} className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-200 p-4 antialiased">
       
-      <header className="w-full max-w-5xl mb-20">
+  <header className="w-full max-w-5xl mb-20">
         <div className="inline-flex flex-col">
           <div className="self-start">
             <DecoratorCircleFirst className="text-gray-400" />
           </div>
           <div className="self-center">
-            <h1 className="text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
+    <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
               Upcoming Events
             </h1>
           </div>
@@ -89,27 +89,38 @@ const Carousel = (props) => {
                     className="rounded-md w-full object-cover aspect-square md:aspect-[4/3] shadow-lg shadow-black/30"
                     onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/600x400/212121/FFFFFF?text=Event+Image'; }}
                 />
-                <div className="w-full flex justify-between items-center mt-6">
+    <div className="w-full flex justify-between items-center mt-6">
                     <div className="text-left">
-                        <p className="text-8xl font-bold text-white">{currentEvent.date.split(' ')[0]}</p>
-                        <p className="text-3xl text-gray-400">{currentEvent.date.split(' ').slice(1).join(' ')}</p>
+      <p className="text-5xl sm:text-6xl md:text-7xl font-bold text-white">{currentEvent.date.split(' ')[0]}</p>
+      <p className="text-xl sm:text-2xl md:text-3xl text-gray-400">{currentEvent.date.split(' ').slice(1).join(' ')}</p>
                     </div>
                     <div className="flex gap-4 text-gray-400">
                         <a href="#" aria-label="Instagram" className="hover:text-white transition-colors"><InstagramIcon /></a>
                         <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors"><LinkedinIcon /></a>
                     </div>
                 </div>
+                {/* Mobile-only next arrow below the image, aligned right */}
+                <div className="mt-4 flex justify-end md:hidden">
+                  <button 
+                    onClick={handleNextEvent} 
+                    className="bg-teal-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
+                    aria-label="Next Event"
+                  >
+                    <DownArrowIcon className="w-6 h-6" />
+                  </button>
+                </div>
             </div>
 
            
-            <div className="flex flex-col h-full relative pb-16 pt-6 md:pt-0">
+      <div className="flex flex-col h-full relative pb-16 pt-6 md:pt-0">
                 <div className="flex-grow">
-                    <h2 className="text-6xl font-bold text-white mb-4 uppercase">{currentEvent.title}</h2>
-                    <p className="text-2xl text-gray-400 leading-relaxed">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 uppercase">{currentEvent.title}</h2>
+        <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                         {currentEvent.description}
                     </p>
                 </div>
-                <div className="absolute bottom-0 right-0">
+        {/* Desktop-only next arrow stays bottom-right */}
+        <div className="hidden md:block absolute bottom-0 right-0">
                     <button 
                         onClick={handleNextEvent} 
                         className="bg-teal-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"

@@ -84,15 +84,15 @@ const Gallery = (props) => {
           }
         `}
       </style>
-      <div id={props.id} className="flex flex-col items-center min-h-screen bg-black text-white p-4 md:p-8 font-iceland">
-        <header className="w-full max-w-6xl mb-20">
+  <div id={props.id} className="flex flex-col items-center min-h-screen bg-black text-white px-4 py-10 md:p-8 font-iceland">
+  <header className="w-full max-w-6xl mb-10 md:mb-20">
           <div className="flex items-center justify-between">
             <div className="inline-flex flex-col">
               <div className="self-start">
                 <DecoratorCircleFirst className="text-gray-400" />
               </div>
               <div className="self-center">
-                <h1 className="text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
+                <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
                   {selectedAlbum ? selectedAlbum.title : 'Gallery'}
                 </h1>
               </div>
@@ -104,8 +104,10 @@ const Gallery = (props) => {
               <button
                 onClick={closeAlbum}
                 className="text-gray-400 hover:text-white transition-colors text-2xl font-light"
+                aria-label="Back to Albums"
               >
-                ← Back to Albums
+                <span aria-hidden="true">←</span>
+                <span className="hidden sm:inline ml-2">Back to Albums</span>
               </button>
             )}
           </div>
@@ -114,7 +116,7 @@ const Gallery = (props) => {
         <main className="w-full max-w-6xl">
           {!selectedAlbum ? (
             // Album Grid View
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               {GALLERY_ALBUMS.map(album => (
                 <div 
                   key={album.id} 
@@ -148,11 +150,11 @@ const Gallery = (props) => {
           ) : (
             // Album Image Grid View
             <div>
-              <div className="mb-8">
+              <div className="mb-6 md:mb-8">
                 <p className="text-gray-400 text-lg">{selectedAlbum.description}</p>
                 <p className="text-gray-500 text-sm mt-2">{selectedAlbum.images.length} photos</p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
                 {selectedAlbum.images.map((image, index) => (
                   <div 
                     key={image.id}
