@@ -216,7 +216,7 @@ const Hero = () => {
           <img src={logo} alt="AAVESH Logo" className="w-28 md:w-32 logo select-none" draggable="false" />
         </div>
 
-  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight tracking-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight tracking-tight">
           <span className="opacity-90">We</span>
           <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]"> {text}</span>
         </h1>
@@ -225,13 +225,23 @@ const Hero = () => {
           Robotics, AI, and innovation—crafted by the AAVESH team.
         </p>
 
-        <div className="mt-8 flex items-center gap-3">
-          <a href="#whatwedo" className="px-5 py-2.5 rounded-md bg-cyan-500/20 text-cyan-200 border border-cyan-400/40 hover:bg-cyan-500/30 transition-colors">
-            What we do
-          </a>
-          <a href="#contact" className="px-5 py-2.5 rounded-md bg-white/5 text-white border border-white/20 hover:bg-white/10 transition-colors">
-            Contact
-          </a>
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="group relative w-48 h-48 mx-auto flex items-center justify-center">
+            {/* Orbiting Buttons */}
+            {/* Our Work */}
+            <a href="#whatwedo" className="absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-full flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform -translate-x-24 opacity-0 group-hover:opacity-100 group-hover:-translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
+              Our Work
+            </a>
+            {/* Get in Touch */}
+            <a href="#contact" className="absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-full flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform translate-x-24 opacity-0 group-hover:opacity-100 group-hover:translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
+              Get in Touch
+            </a>
+
+            {/* Center Button */}
+            <button className="relative w-32 h-32 bg-black border-2 border-cyan-500 rounded-full text-cyan-400 text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+              Explore
+            </button>
+          </div>
         </div>
       </div>
 
