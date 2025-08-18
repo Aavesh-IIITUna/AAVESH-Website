@@ -43,37 +43,16 @@ const Navbar = () => {
         className="fixed top-4 left-4 z-50 cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={toggleSidebar}
+        role="button"
+        aria-label="Open navigation menu"
       >
         <img
           src={aaveshLogo}
           alt="AAVESH Logo"
-          className="h-16 w-16 top-4 object-cover rounded-full transition-transform duration-300 hover:scale-110"
+          className="h-16 w-16 mt-5 top-4 object-cover rounded-full transition-transform duration-300 hover:scale-110"
         />
       </div>
-
-      <button
-        onClick={toggleSidebar}
-        className="md:hidden fixed top-6 right-4 z-50 bg-gray-900 text-white p-3 rounded-lg shadow-lg hover:bg-gray-800 transition-colors duration-200"
-        aria-label="Toggle navigation menu"
-      >
-        <div className="w-6 h-6 flex flex-col justify-center items-center">
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
-            }`}
-          ></span>
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "opacity-0" : "opacity-100"
-            }`}
-          ></span>
-          <span
-            className={`block w-full h-0.5 bg-white transition-all duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
-            }`}
-          ></span>
-        </div>
-      </button>
 
       {isOpen && (
         <div
