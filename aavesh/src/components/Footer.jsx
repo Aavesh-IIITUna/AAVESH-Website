@@ -20,10 +20,10 @@ const Footer = (props) => {
     e.preventDefault();
     emailjs
       .sendForm(
-  "service_3wqq0ir",
-  "template_qihejkg",
-  e.currentTarget,
-  "0KrmH-uQhKkkBTEOv"
+        "service_3wqq0ir",
+        "template_qihejkg",
+        e.currentTarget,
+        "0KrmH-uQhKkkBTEOv"
       )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -77,22 +77,30 @@ const Footer = (props) => {
           <div className="  text-center font-iceland mb-6">
             <div className="flex">
               <div className="w-1/2">
-            <img
-              src="/logo.png"
-              alt="AAVESH Logo"
-              className="m-4 w-64 lg:block hidden"
-            />
-            </div>
-             <div className="w-1/2 flex justify-end">
-            <img
-              src="/iiitLogo.webp"
-              alt="AAVESH Logo"
-              className="m-4 w-32 right-0 lg:block hidden"
-            />
-            </div>
+                <img
+                  src="/logo.png"
+                  alt="AAVESH Logo"
+                  className="m-4 w-64 lg:block hidden"
+                />
+              </div>
+              <div className="w-1/2 flex justify-end">
+                <img
+                  src="/iiitLogo.webp"
+                  alt="AAVESH Logo"
+                  className="m-4 w-32 right-0 lg:block hidden"
+                />
+              </div>
             </div>
             <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
-            <Heading as="h2" sizeClass="text-5xl md:text-7xl" uppercase={false} colorClass="text-white font-iceland" className="font-bold m-2">LET&apos;S CONNECT!</Heading>
+            <Heading
+              as="h2"
+              sizeClass="text-4xl md:text-5xl"
+              uppercase={false}
+              colorClass="text-white font-iceland"
+              className="font-bold m-2 text-center"
+            >
+              LET&apos;S CONNECT!
+            </Heading>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center space-y-4"
