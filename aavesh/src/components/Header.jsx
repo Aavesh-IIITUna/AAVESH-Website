@@ -7,19 +7,34 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const isDesktop = () => typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches;
+
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
   const smoothScrollTo = (elementId) => {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
+    // First go to top, then to the target for a full-page scroll feel
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    const start = Date.now();
+    const maxWait = 1800;
+    const interval = setInterval(() => {
+      const atTop = Math.round(window.scrollY) === 0;
+      const timedOut = Date.now() - start > maxWait;
+      if (atTop || timedOut) {
+        clearInterval(interval);
+        const element = document.getElementById(elementId);
+        setTimeout(() => {
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+              inline: "nearest",
+            });
+          }
+        }, 20);
+      }
+    }, 50);
     setIsOpen(false);
   };
 
@@ -40,9 +55,11 @@ const Navbar = () => {
     <>
       <div
         className="absolute md:fixed top-4 left-4 z-50 cursor-pointer"
-        onClick={toggleSidebar}
+        onClick={() => { if (!isDesktop()) toggleSidebar(); }}
+        onMouseEnter={() => { if (isDesktop()) setIsOpen(true); }}
         role="button"
         aria-label="Open navigation menu"
+        title="Menu"
       >
         <img
           src={aaveshLogo}
@@ -67,6 +84,7 @@ const Navbar = () => {
         style={{
           background: "linear-gradient(to bottom, #121212 0%, #000000 100%)",
         }}
+        onMouseLeave={() => { if (isDesktop()) setIsOpen(false); }}
       >
         {/* Navigation Menu */}
         <div className="py-6 pt-24">
