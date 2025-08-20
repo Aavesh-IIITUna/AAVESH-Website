@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Heading from './Heading';
 import {sponsors} from '../constants/sponsors'
 
 // Decorator components remain the same
@@ -48,9 +49,7 @@ const Sponsors = (props) => {
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
             <div className=" mx-2 py-2 self-start">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal tracking-[0.1em] uppercase text-gray-200">
-                Sponsors
-              </h1>
+              <Heading as="h1" size="sm">Sponsors</Heading>
             </div>
             <div className="self-end">
               <DecoratorLinesFirst className="text-gray-400" />

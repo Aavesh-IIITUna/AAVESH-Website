@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Heading from './Heading';
 
 const About = (props) => {
   return (
@@ -6,8 +7,8 @@ const About = (props) => {
 
       {/* Mobile heading */}
       <div className="w-full max-w-7xl lg:hidden text-center mb-8">
-        <h2 className="text-white text-xl sm:text-3xl font-light tracking-wide">We are</h2>
-        <h1 className="text-cyan-400 text-4xl sm:text-5xl font-bold tracking-widest font-iceland">AAVESH</h1>
+        <Heading as="h2" align="center" size="sm" colorClass="text-white" className="tracking-wide">We are</Heading>
+        <Heading as="h1" align="center" size="md" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
         <p className="text-gray-300 text-base sm:text-lg font-medium mt-2">– ELECTRONICS & TECH SOCIETY–</p>
         <p className="text-gray-300 text-base sm:text-lg font-medium">IIITUNA</p>
       </div>
@@ -35,8 +36,8 @@ const About = (props) => {
 
         {/* Heading in center of image gap */}
         <div className="hidden lg:block absolute top-3/2 left-1/2 -translate-x-1/2 -translate-y-[130%] text-center z-20">
-          <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide">We are</h2>
-          <h1 className="text-cyan-400 text-5xl md:text-6xl font-bold tracking-widest font-iceland">AAVESH</h1>
+          <Heading as="h2" align="center" size="md" colorClass="text-white" className="tracking-wide">We are</Heading>
+          <Heading as="h1" align="center" size="lg" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
           <p className="text-gray-300 text-lg font-medium mt-2">– ELECTRONICS & TECH SOCIETY–</p>
           <p className="text-gray-300 text-lg font-medium">IIITUNA</p>
         </div>

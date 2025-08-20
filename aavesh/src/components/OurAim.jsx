@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import PropTypes from 'prop-types';
+import Heading from './Heading';
 import { letters, originalValue } from '../constants/aim';
 
 export default function OurAim(props) {
@@ -102,9 +103,7 @@ export default function OurAim(props) {
   return (
     <div id={props.id} className="w-full mx-auto mb-10 md:mb-12 px-4">
       <main className="border-2 white rounded-lg h-auto md:h-48 mx-0 md:mx-20 py-4 md:py-2 overflow-hidden">
-        <h1 className="text-white text-3xl md:text-4xl text-center font-bold mb-3 md:mb-4">
-          Our Aim
-        </h1>
+  <Heading as="h1" align="center" size="md" colorClass="text-white" className="font-bold mb-3 md:mb-4">Our Aim</Heading>
         <div className="px-4 md:px-6 h-auto md:h-24 flex items-center justify-center">
           <p
             className="text-center text-white text-lg md:text-2xl cursor-pointer overflow-hidden"

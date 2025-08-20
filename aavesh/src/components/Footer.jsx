@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import emailjs from "emailjs-com";
 import socials from "../Socials";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 const Footer = (props) => {
   const [user, setUser] = useState({
@@ -19,10 +20,10 @@ const Footer = (props) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        import.meta.env.VITE_REACT_APP_SERVICE || "",
-        import.meta.env.VITE_REACT_APP_TEMPLATE || "",
-        e.currentTarget,
-        import.meta.env.VITE_REACT_APP_USER || ""
+  "service_3wqq0ir",
+  "template_qihejkg",
+  e.currentTarget,
+  "0KrmH-uQhKkkBTEOv"
       )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -73,16 +74,25 @@ const Footer = (props) => {
       />
       <div className="relative z-10 bg-[#1c1c1c] text-white py-8 rounded-t-3xl shadow-lg mt-10">
         <div className="container mx-auto px-4 relative">
-          <div className="text-center font-iceland mb-6">
+          <div className="  text-center font-iceland mb-6">
+            <div className="flex">
+              <div className="w-1/2">
             <img
               src="/logo.png"
               alt="AAVESH Logo"
               className="m-4 w-64 lg:block hidden"
             />
+            </div>
+             <div className="w-1/2 flex justify-end">
+            <img
+              src="/iiitLogo.webp"
+              alt="AAVESH Logo"
+              className="m-4 w-32 right-0 lg:block hidden"
+            />
+            </div>
+            </div>
             <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
-            <h2 className="text-5xl md:text-7xl font-iceland font-bold m-2">
-              LET&apos;S CONNECT!
-            </h2>
+            <Heading as="h2" sizeClass="text-5xl md:text-7xl" uppercase={false} colorClass="text-white font-iceland" className="font-bold m-2">LET&apos;S CONNECT!</Heading>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center space-y-4"
@@ -107,7 +117,7 @@ const Footer = (props) => {
               />
               <button
                 type="submit"
-                className="bg-cyan-600 text-white py-2 px-4 rounded-full"
+                className="cursor-target bg-cyan-600 text-white py-2 px-4 rounded-none"
               >
                 SEND
               </button>

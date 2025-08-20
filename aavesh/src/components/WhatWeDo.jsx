@@ -1,6 +1,23 @@
 import { marqueeDataTop, marqueeDataBottom } from '../constants/whatWeDo'; // Import static data from constants
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import Heading from './Heading';
+
+// Reuse same decorative header visuals as other sections
+const DecoratorCircleFirst = ({ className }) => (
+  <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
+    <path d="M8 6H70" stroke="currentColor" strokeWidth="1"/>
+  </svg>
+);
+const DecoratorLinesFirst = ({ className }) => (
+  <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M0 6H62" stroke="currentColor" strokeWidth="1"/>
+    <circle cx="66" cy="6" r="3.5" fill="currentColor"/>
+  </svg>
+);
+DecoratorCircleFirst.propTypes = { className: PropTypes.string };
+DecoratorLinesFirst.propTypes = { className: PropTypes.string };
 
 
 const marqueeStyles = `
@@ -49,7 +66,17 @@ const WhatWeDo = (props) => {
       <div id={props.id} className="relative flex flex-col items-start justify-center bg-black text-white overflow-x-hidden p-4 md:py-12 md:px-24">
         
         <header className="w-full mb-16 md:mb-24">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-light tracking-widest">What we do!</h1>
+          <div className="md:mx-72 inline-flex flex-col">
+            <div className="self-start">
+              <DecoratorCircleFirst className="text-gray-400" />
+            </div>
+            <div className=" py-2 self-start">
+              <Heading as="h1" size="sm">What we do!</Heading>
+            </div>
+            <div className="self-end">
+              <DecoratorLinesFirst className="text-gray-400" />
+            </div>
+          </div>
         </header>
 
         
