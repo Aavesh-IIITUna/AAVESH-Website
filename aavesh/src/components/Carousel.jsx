@@ -102,7 +102,7 @@ const Carousel = (props) => {
                 <div className="mt-4 flex justify-end md:hidden">
                   <button 
                     onClick={handleNextEvent} 
-                    className="bg-teal-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
+                    className="cursor-target bg-teal-600 text-white rounded-none w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
                     aria-label="Next Event"
                   >
                     <DownArrowIcon className="w-6 h-6" />
@@ -120,9 +120,9 @@ const Carousel = (props) => {
                 </div>
         {/* Desktop-only next arrow stays bottom-right */}
         <div className="hidden md:block absolute bottom-0 right-0">
-                    <button 
+          <button 
                         onClick={handleNextEvent} 
-                        className="bg-teal-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
+            className="cursor-target bg-teal-600 text-white rounded-none w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
                         aria-label="Next Event"
                     >
                         <DownArrowIcon className="w-6 h-6" />

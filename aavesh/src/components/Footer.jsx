@@ -117,7 +117,7 @@ const Footer = (props) => {
               />
               <button
                 type="submit"
-                className="bg-cyan-600 text-white py-2 px-4 rounded-full"
+                className="cursor-target bg-cyan-600 text-white py-2 px-4 rounded-none"
               >
                 SEND
               </button>

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import TeamPage from "./pages/TeamPage";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SmoothScrollManager from './components/SmoothScrollManager';
+import TargetCursor from './components/TargetCursor';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ const App = () => {
       {!loading && (
         <BrowserRouter>
           <SmoothScrollManager />
+          <TargetCursor />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/team' element={<TeamPage />} />

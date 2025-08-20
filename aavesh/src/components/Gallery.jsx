@@ -205,13 +205,13 @@ const Gallery = (props) => {
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 text-3xl font-light bg-black/50 rounded-full w-12 h-12 flex items-center justify-center"
+                      className="cursor-target absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 text-3xl font-light bg-black/50 rounded-none w-12 h-12 flex items-center justify-center"
                     >
                       ‹
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 text-3xl font-light bg-black/50 rounded-full w-12 h-12 flex items-center justify-center"
+                      className="cursor-target absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 text-3xl font-light bg-black/50 rounded-none w-12 h-12 flex items-center justify-center"
                     >
                       ›
                     </button>

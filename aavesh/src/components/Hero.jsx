@@ -229,16 +229,16 @@ const Hero = () => {
           <div className="group relative w-48 h-48 mx-auto flex items-center justify-center">
             {/* Orbiting Buttons */}
             {/* Our Work */}
-            <a href="#whatwedo" className="absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-full flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform -translate-x-24 opacity-0 group-hover:opacity-100 group-hover:-translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
+            <a href="#whatwedo" className="cursor-target absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform -translate-x-24 opacity-0 group-hover:opacity-100 group-hover:-translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
               Our Work
             </a>
             {/* Get in Touch */}
-            <a href="#contact" className="absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-full flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform translate-x-24 opacity-0 group-hover:opacity-100 group-hover:translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
+            <a href="#contact" className="cursor-target absolute w-24 h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-sm transition-all duration-500 ease-in-out transform translate-x-24 opacity-0 group-hover:opacity-100 group-hover:translate-x-32 hover:bg-cyan-800/70 hover:border-cyan-500">
               Get in Touch
             </a>
 
             {/* Center Button */}
-            <button className="relative w-32 h-32 bg-black border-2 border-cyan-500 rounded-full text-cyan-400 text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+            <button className="cursor-target relative w-32 h-32 bg-black border-2 border-cyan-500 rounded-none text-cyan-400 text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
               Explore
             </button>
           </div>

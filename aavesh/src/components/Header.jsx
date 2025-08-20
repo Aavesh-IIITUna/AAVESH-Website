@@ -93,7 +93,7 @@ const Navbar = () => {
               <a
                 href="#home"
                 onClick={(e) => handleSmoothClick(e, "home")}
-                className="group flex items-center px-4 py-3 text-white hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-white hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">Home</span>
                 <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -105,7 +105,7 @@ const Navbar = () => {
               <a
                 href="#about"
                 onClick={(e) => handleSmoothClick(e, "about")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">About</span>
                 <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -117,7 +117,7 @@ const Navbar = () => {
               <a
                 href="#events"
                 onClick={(e) => handleSmoothClick(e, "events")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">
                   Events
@@ -131,7 +131,7 @@ const Navbar = () => {
               <a
                 href="#whatwedo"
                 onClick={(e) => handleSmoothClick(e, "whatwedo")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">
                   What We Do
@@ -145,7 +145,7 @@ const Navbar = () => {
               <a
                 href="#gallery"
                 onClick={(e) => handleSmoothClick(e, "gallery")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">
                   Gallery
@@ -159,7 +159,7 @@ const Navbar = () => {
               <Link
                 to="/team"
                 onClick={() => setIsOpen(false)}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">Team</span>
                 <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -171,7 +171,7 @@ const Navbar = () => {
               <a
                 href="#sponsors"
                 onClick={(e) => handleSmoothClick(e, "sponsors")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">
                   Sponsors
@@ -185,7 +185,7 @@ const Navbar = () => {
               <a
                 href="#contact"
                 onClick={(e) => handleSmoothClick(e, "contact")}
-                className="group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
               >
                 <span className="font-medium font-iceland text-2xl">
                   Contact Us
