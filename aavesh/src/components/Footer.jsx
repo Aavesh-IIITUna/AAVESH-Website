@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import emailjs from "emailjs-com";
 import socials from "../Socials";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 const Footer = (props) => {
   const [user, setUser] = useState({
@@ -80,9 +81,7 @@ const Footer = (props) => {
               className="m-4 w-64 lg:block hidden"
             />
             <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
-            <h2 className="text-5xl md:text-7xl font-iceland font-bold m-2">
-              LET&apos;S CONNECT!
-            </h2>
+            <Heading as="h2" sizeClass="text-5xl md:text-7xl" uppercase={false} colorClass="text-white font-iceland" className="font-bold m-2">LET&apos;S CONNECT!</Heading>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center space-y-4"

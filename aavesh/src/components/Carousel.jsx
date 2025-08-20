@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { EVENTS_DATA } from '../constants/events';
+import Heading from './Heading';
 
 
 const InstagramIcon = (props) => (
@@ -67,9 +68,7 @@ const Carousel = (props) => {
             <DecoratorCircleFirst className="text-gray-400" />
           </div>
           <div className="self-center">
-    <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
-              Upcoming Events
-            </h1>
+            <Heading as="h1" size="md" className="py-2">Upcoming Events</Heading>
           </div>
           <div className="self-end">
             <DecoratorLinesFirst className="text-gray-400" />
@@ -114,7 +113,7 @@ const Carousel = (props) => {
            
       <div className="flex flex-col h-full relative pb-16 pt-6 md:pt-0">
                 <div className="flex-grow">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 uppercase">{currentEvent.title}</h2>
+  <Heading as="h2" size="lg" colorClass="text-white" className="font-bold mb-4">{currentEvent.title}</Heading>
         <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                         {currentEvent.description}
                     </p>
