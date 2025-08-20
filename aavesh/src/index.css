@@ -47,3 +47,22 @@ html {
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* Responsive tweaks for reusable Heading component */
+.app-heading {
+  line-height: 1.15;
+  word-break: keep-all;
+  text-wrap: balance; /* modern browsers: balance multi-line titles */
+}
+@media (max-width: 640px) {
+  .app-heading {
+    line-height: 1.2; /* a bit more breathing room on small screens */
+    letter-spacing: 0.12em; /* slightly tighter tracking for small viewports */
+    word-break: break-word; /* allow wrap if needed */
+    hyphens: auto; /* hyphenate long words if needed */
+  }
+  /* Keep iceland display headings visually balanced on mobile */
+  .font-iceland.app-heading {
+    letter-spacing: 0.08em;
+  }
+}

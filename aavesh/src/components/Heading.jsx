@@ -22,7 +22,7 @@ export default function Heading({
   const base = `${uppercase ? 'uppercase' : ''} tracking-[0.2em] font-light`;
   const sizeClasses = sizeClass || sizeMap[size] || sizeMap.md;
   return (
-    <Tag className={`${sizeClasses} ${base} ${colorClass} ${alignClass} ${className}`.trim()}>{children}</Tag>
+    <Tag className={`app-heading ${sizeClasses} ${base} ${colorClass} ${alignClass} ${className}`.trim()}>{children}</Tag>
   );
 }
 
