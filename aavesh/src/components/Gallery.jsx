@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { GALLERY_ALBUMS } from '../constants/gallery';
+import ScrollReveal from './ScrollReveal';
 const DecoratorCircleFirst = ({ className }) => (
   <svg width="70" height="12" viewBox="0 0 70 12" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <circle cx="4" cy="6" r="3.5" fill="currentColor"/>
@@ -93,7 +94,9 @@ const Gallery = (props) => {
               </div>
               <div className="self-center">
                 <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
-                  {selectedAlbum ? selectedAlbum.title : 'Gallery'}
+                  <ScrollReveal>
+                    {selectedAlbum ? selectedAlbum.title : 'Gallery'}
+                  </ScrollReveal>
                 </h1>
               </div>
               <div className="self-end">

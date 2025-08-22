@@ -3,6 +3,7 @@ import TeamInfoCard from "../components/TeamInfoCard";
 import { CoreTeam, Team } from "../Members";
 import Navbar from "../components/Header";
 import Heading from "../components/Heading";
+import ScrollReveal from "../components/ScrollReveal";
 
 // Temporary hardcoded Faculty data (can move to Members.js)
 const facultyCoordinator = {
@@ -23,7 +24,11 @@ const TeamPage = () => {
         <div className="min-h-screen bg-black text-white flex flex-col p-6">
           
           {/* 🧑‍🏫 Faculty Coordinator Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">FACULTY COORDINATOR</Heading>
+          <Heading as="h1" size="lg" className="mb-8 ml-28">
+            <ScrollReveal>
+              FACULTY COORDINATOR
+            </ScrollReveal>
+          </Heading>
           <div className="w-full flex justify-center mb-12">
             <div className="w-full max-w-sm m-auto">
               <CoreTeamInfoCard {...facultyCoordinator} />
@@ -31,7 +36,11 @@ const TeamPage = () => {
           </div>
 
           {/* 👥 Core Team Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">CORE TEAM</Heading>
+          <Heading as="h1" size="lg" className="mb-8 ml-28">
+            <ScrollReveal>
+              CORE TEAM
+            </ScrollReveal>
+          </Heading>
           <div className="w-full flex justify-center">
             <div className="w-[82vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
               {CoreTeam.map((admin, index) => (
@@ -43,7 +52,11 @@ const TeamPage = () => {
           </div>
 
           {/* 🧑‍💻 Team Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">TEAM</Heading>
+          <Heading as="h1" size="lg" className="mb-8 ml-28">
+            <ScrollReveal>
+              TEAM
+            </ScrollReveal>
+          </Heading>
           <div className="w-full flex justify-center">
             <div className="w-[82vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
               {Team.map((admin, index) => (

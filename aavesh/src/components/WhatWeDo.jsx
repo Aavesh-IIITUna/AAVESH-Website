@@ -2,6 +2,7 @@ import { marqueeDataTop, marqueeDataBottom } from '../constants/whatWeDo'; // Im
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Heading from './Heading';
+import ScrollReveal from './ScrollReveal';
 
 // Reuse same decorative header visuals as other sections
 const DecoratorCircleFirst = ({ className }) => (
@@ -71,7 +72,11 @@ const WhatWeDo = (props) => {
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
             <div className=" py-2 self-start">
-              <Heading as="h1" size="sm">What we do!</Heading>
+              <Heading as="h1" size="sm">
+                <ScrollReveal>
+                  What we do!
+                </ScrollReveal>
+              </Heading>
             </div>
             <div className="self-end">
               <DecoratorLinesFirst className="text-gray-400" />
