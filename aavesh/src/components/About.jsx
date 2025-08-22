@@ -1,4 +1,3 @@
-import ScrollReveal from './ScrollReveal';
 import PropTypes from 'prop-types';
 import Heading from './Heading';
 
@@ -45,23 +44,23 @@ const About = (props) => {
 
         {/* Center overlapping text box */}
         <div className="hidden lg:block absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-black/90 backdrop-blur-md p-8 lg:p-12 max-w-2xl text-center shadow-2xl ">
-          <ScrollReveal textClassName="text-white">
+          <p className="text-white text-base md:text-lg lg:text-xl font-light mb-6 leading-relaxed">
             Aavesh is an electronics society that strives to teach and help students acquire new skills in an era of rapidly evolving technology in the field of electronics and communication engineering.
-          </ScrollReveal>
-          <ScrollReveal textClassName="text-white">
+          </p>
+          <p className="text-white text-base md:text-lg lg:text-xl font-light leading-relaxed">
             Empower students to acquire, demonstrate and articulate the value of knowledge and skills that will support them as lifelong lessons.
-          </ScrollReveal>
+          </p>
         </div>
       </div>
 
       {/* Mobile text box below images */}
       <div className="lg:hidden w-full max-w-3xl bg-black/80 backdrop-blur-md p-6 sm:p-8 text-center rounded-xl shadow-2xl">
-        <ScrollReveal textClassName="text-white text-base sm:text-lg font-light mb-4 leading-relaxed">
+        <p className="text-white text-base sm:text-lg font-light mb-4 leading-relaxed">
           Aavesh is an electronics society that strives to teach and help students acquire new skills in an era of rapidly evolving technology in the field of electronics and communication engineering.
-        </ScrollReveal>
-        <ScrollReveal textClassName="text-white text-base sm:text-lg font-light leading-relaxed">
+        </p>
+        <p className="text-white text-base sm:text-lg font-light leading-relaxed">
           Empower students to acquire, demonstrate and articulate the value of knowledge and skills that will support them as lifelong lessons.
-        </ScrollReveal>
+        </p>
       </div>
     </div>
   );

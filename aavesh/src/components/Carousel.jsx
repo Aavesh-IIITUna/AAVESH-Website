@@ -2,7 +2,6 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { EVENTS_DATA } from '../constants/events';
 import Heading from './Heading';
-import ScrollReveal from './ScrollReveal';
 
 
 const InstagramIcon = (props) => (
@@ -69,11 +68,7 @@ const Carousel = (props) => {
             <DecoratorCircleFirst className="text-gray-400" />
           </div>
           <div className="self-center">
-            <Heading as="h1" size="md" className="py-2">
-              <ScrollReveal>
-                Upcoming Events
-              </ScrollReveal>
-            </Heading>
+            <Heading as="h1" size="md" className="py-2">Upcoming Events</Heading>
           </div>
           <div className="self-end">
             <DecoratorLinesFirst className="text-gray-400" />
