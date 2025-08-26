@@ -217,7 +217,7 @@ const Hero = () => {
           <img src={logo} alt="AAVESH Logo" className="w-28 md:w-32 logo select-none" draggable="false" />
         </div>
         <ElectricBorder color="#7df9ff" speed={1.2} chaos={0.7} thickness={3} style={{ borderRadius: 24, padding: 0 }}>
-          <div>
+          <div className="m-4">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight tracking-tight">
               <span className="opacity-90">We</span>
               <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]"> {text}</span>
