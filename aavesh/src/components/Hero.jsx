@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import logo from "../assets/AAVESH_B_WBG.svg";
 import { HERO_WORDS } from "../constants/hero";
+import ElectricBorder from "./ElectricBorder";
 
 // Lightweight interactive constellation background using a single canvas
 const ConstellationCanvas = ({ color = "rgba(34, 211, 238, 0.8)", maxPoints = 90 }) => {
@@ -210,39 +211,39 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.12),rgba(0,0,0,0.2)_40%,rgba(0,0,0,0.8))]" />
       </div>
 
-      {/* content */}
+      {/* content with ElectricBorder */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-4">
         <div className="absolute top-3 right-4">
           <img src={logo} alt="AAVESH Logo" className="w-28 md:w-32 logo select-none" draggable="false" />
         </div>
-
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight tracking-tight">
-          <span className="opacity-90">We</span>
-          <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]"> {text}</span>
-        </h1>
-
-        <p className="mt-4 max-w-2xl text-cyan-100/80 text-base sm:text-lg md:text-xl">
-          Robotics, AI, and innovation—crafted by the AAVESH team.
-        </p>
-
-        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <div className="group relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 mx-auto flex items-center justify-center">
-            {/* Orbiting Buttons */}
-            {/* Our Work */}
-            <a href="#whatwedo" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform -translate-y-16 sm:translate-y-0 sm:-translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:-translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
-              Our Work
-            </a>
-            {/* Get in Touch */}
-            <a href="#contact" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform translate-y-16 sm:translate-y-0 sm:translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
-              Get in Touch
-            </a>
-
-            {/* Center Button */}
-            <button className="cursor-target relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-black border-2 border-cyan-500 rounded-none text-cyan-400 text-base sm:text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
-              Explore
-            </button>
+        <ElectricBorder color="#7df9ff" speed={1.2} chaos={0.7} thickness={3} style={{ borderRadius: 24, padding: 0 }}>
+          <div className="m-4">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-tight tracking-tight">
+              <span className="opacity-90">We</span>
+              <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.5)]"> {text}</span>
+            </h1>
+            <p className="mt-4 m-4 max-w-2xl text-cyan-100/80 text-base sm:text-lg md:text-xl">
+              Robotics, AI, and innovation—crafted by the AAVESH team.
+            </p>
+            <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="group relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 mx-auto flex items-center justify-center">
+                {/* Orbiting Buttons */}
+                {/* Our Work */}
+                <a href="#whatwedo" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform -translate-y-16 sm:translate-y-0 sm:-translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:-translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
+                  Our Work
+                </a>
+                {/* Get in Touch */}
+                <a href="#contact" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform translate-y-16 sm:translate-y-0 sm:translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
+                  Get in Touch
+                </a>
+                {/* Center Button */}
+                <button className="cursor-target relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-black border-2 border-cyan-500 rounded-none text-cyan-400 text-base sm:text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+                  Explore
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        </ElectricBorder>
       </div>
 
       {/* subtle parallax accents */}
