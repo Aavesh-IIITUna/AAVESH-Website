@@ -92,7 +92,7 @@ const Gallery = (props) => {
                 <DecoratorCircleFirst className="text-gray-400" />
               </div>
               <div className="self-center">
-                <h1 className="text-3xl sm:text-4xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
                   {selectedAlbum ? selectedAlbum.title : 'Gallery'}
                 </h1>
               </div>

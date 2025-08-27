@@ -139,7 +139,7 @@ const Footer = (props) => {
               ))}
             </div>
             <p>
-              Developed by <span className="text-cyan-600">@aavesh</span>
+              <a href="/developers">Developed by <span className="text-cyan-600">@aavesh</span></a>
             </p>
           </div>
         </div>
