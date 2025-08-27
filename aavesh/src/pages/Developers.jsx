@@ -30,8 +30,8 @@ const Developers = () => {
             ))}
           </div>
         </div>
-        <Footer />
       </div>
+  <Footer id="contact" />
     </>
   );
 };
