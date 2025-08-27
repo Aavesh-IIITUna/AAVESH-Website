@@ -203,7 +203,7 @@ const Hero = () => {
   }, [text, isDeleting, index, words]);
 
   return (
-    <section id="home" className="relative h-screen w-full overflow-hidden bg-black">
+    <section id="hero" className="relative h-screen w-full overflow-hidden bg-black">
       {/* interactive background */}
       <div className="absolute inset-0">
         <ConstellationCanvas />

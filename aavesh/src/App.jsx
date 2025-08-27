@@ -5,6 +5,7 @@ import LoadingScreen from "./components/Loadingscreen";
 import { useState } from "react";
 import Home from "./pages/Home";
 import TeamPage from "./pages/TeamPage";
+import Developers from "./pages/Developers";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SmoothScrollManager from './components/SmoothScrollManager';
 import TargetCursor from './components/TargetCursor';
@@ -26,6 +27,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/team' element={<TeamPage />} />
+            <Route path='/developers' element={<Developers />} />
             <Route path='/carousel' element={<Carousel />} />
           </Routes>
         </BrowserRouter>
