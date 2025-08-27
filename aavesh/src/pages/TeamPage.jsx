@@ -23,7 +23,7 @@ const TeamPage = () => {
         <div className="min-h-screen bg-black text-white flex flex-col p-6">
           
           {/* 🧑‍🏫 Faculty Coordinator Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">FACULTY COORDINATOR</Heading>
+          <Heading as="h1" size="md" className="mb-8 ml-28">FACULTY COORDINATOR</Heading>
           <div className="w-full flex justify-center mb-12">
             <div className="w-full max-w-sm m-auto">
               <CoreTeamInfoCard {...facultyCoordinator} />
@@ -31,7 +31,7 @@ const TeamPage = () => {
           </div>
 
           {/* 👥 Core Team Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">CORE TEAM</Heading>
+          <Heading as="h1" size="md" className="mb-8 ml-28">CORE TEAM</Heading>
           <div className="w-full flex justify-center">
             <div className="w-[82vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
               {CoreTeam.map((admin, index) => (
@@ -43,7 +43,7 @@ const TeamPage = () => {
           </div>
 
           {/* 🧑‍💻 Team Section */}
-          <Heading as="h1" size="lg" className="mb-8 ml-28">TEAM</Heading>
+          <Heading as="h1" size="md" className="mb-8 ml-28">TEAM</Heading>
           <div className="w-full flex justify-center">
             <div className="w-[82vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
               {Team.map((admin, index) => (

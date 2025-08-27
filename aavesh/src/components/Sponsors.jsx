@@ -49,7 +49,7 @@ const Sponsors = (props) => {
               <DecoratorCircleFirst className="text-gray-400" />
             </div>
             <div className=" mx-2 py-2 self-start">
-              <Heading as="h1" size="sm">Sponsors</Heading>
+              <Heading as="h1" size="md">Sponsors</Heading>
             </div>
             <div className="self-end">
               <DecoratorLinesFirst className="text-gray-400" />

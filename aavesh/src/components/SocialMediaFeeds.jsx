@@ -6,7 +6,7 @@ export default function SocialMediaFeeds() {
       <div className="flex gap-8">
         <div className="relative w-72 h-[450px] bg-gray-300 rounded-lg shadow-lg">
           <div className="p-6">
-            <Heading as="h2" sizeClass="text-2xl" uppercase={false} colorClass="text-black" className="font-bold">
+            <Heading as="h2" sizeClass="text-3xl sm:text-4xl md:text-5xl" uppercase={false} colorClass="text-black" className="font-bold">
               social media
               <br />
               feeds

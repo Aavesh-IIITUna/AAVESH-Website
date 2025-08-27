@@ -3,18 +3,25 @@ import PropTypes from 'prop-types';
 import Heading from './Heading';
 import { letters, originalValue } from '../constants/aim';
 
+const aimTexts = [
+  originalValue,
+  "AAVESH inspires students to push boundaries in electronics and technology, encouraging teamwork and leadership through innovative projects and competitions.",
+  "By connecting theory with hands-on experience, AAVESH cultivates a community of future-ready engineers and creative problem solvers."
+];
+
 export default function OurAim(props) {
 
-  // Generate initial scrambled text of the same length as the target text.
+  // Generate initial scrambled text of the same length as the first aim text.
   const initialText = useMemo(() => {
-    return originalValue
+    return aimTexts[0]
       .split('')
       .map(() => letters[Math.floor(Math.random() * letters.length)])
       .join('');
-  }, []); // Remove unnecessary dependencies
+  }, []);
 
   const [displayText, setDisplayText] = useState(initialText);
   const [isHovering, setIsHovering] = useState(false);
+  const [aimIndex, setAimIndex] = useState(0);
 
   // Refs to hold interval/timeout IDs and state without causing re-renders.
   const animationIntervalRef = useRef(null);
@@ -57,9 +64,8 @@ export default function OurAim(props) {
    */
   const handleMouseEnter = () => {
     setIsHovering(true);
-    // Immediately stop any pending loops and scramble to the final value.
     clearTimeout(loopTimeoutRef.current);
-    scramble(originalValue, () => {
+    scramble(aimTexts[aimIndex], () => {
       isRevealedRef.current = true;
     });
   };
@@ -72,33 +78,28 @@ export default function OurAim(props) {
    * A single useEffect to manage the animation loop.
    */
   useEffect(() => {
-    // If we are hovering, the mouse handlers are in control. Do nothing here.
     if (isHovering) {
       return;
     }
 
-    // This function defines one cycle of the animation loop.
+    // Animation loop cycles through aimTexts
     const animationLoop = () => {
-      const target = isRevealedRef.current ? initialText : originalValue;
-      scramble(target, () => {
-        isRevealedRef.current = !isRevealedRef.current;
-        // After one cycle completes, set a timeout for the next one.
+      scramble(aimTexts[aimIndex], () => {
+        // Move to next aim text, loop back after third
+        setAimIndex((prev) => (prev + 1) % aimTexts.length);
         loopTimeoutRef.current = setTimeout(animationLoop, 5000);
       });
     };
 
-    // Start the first animation cycle after a short delay on component mount
-    // or when the user's mouse leaves the element.
     const startDelay = setTimeout(animationLoop, 1000);
 
-    // Cleanup function: This is critical. It stops all pending animations.
     return () => {
       clearTimeout(startDelay);
       clearTimeout(loopTimeoutRef.current);
       clearInterval(animationIntervalRef.current);
       clearTimeout(animationTimeoutRef.current);
     };
-  }, [isHovering, initialText]); // Rerun this effect when hover state changes.
+  }, [isHovering, aimIndex, initialText]);
 
   return (
     <div id={props.id} className="w-full mx-auto mb-10 md:mb-12 px-4">

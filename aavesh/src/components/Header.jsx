@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import aaveshLogo from "../assets/AAVESH_LOGO.svg";
+import { NAV_LINKS } from '../constants/navbar';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,115 +87,36 @@ const Navbar = () => {
         }}
         onMouseLeave={() => { if (isDesktop()) setIsOpen(false); }}
       >
-        {/* Navigation Menu */}
+        {/* Navigation Menu - now mapped from NAV_LINKS */}
         <div className="py-6 pt-24">
           <ul className="space-y-2 px-3">
-            <li>
-              <a
-                href="#home"
-                onClick={(e) => handleSmoothClick(e, "home")}
-                className="cursor-target group flex items-center px-4 py-3 text-white hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">Home</span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                onClick={(e) => handleSmoothClick(e, "about")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">About</span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#events"
-                onClick={(e) => handleSmoothClick(e, "events")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">
-                  Events
-                </span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#whatwedo"
-                onClick={(e) => handleSmoothClick(e, "whatwedo")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">
-                  What We Do
-                </span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                onClick={(e) => handleSmoothClick(e, "gallery")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">
-                  Gallery
-                </span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <Link
-                to="/team"
-                onClick={() => setIsOpen(false)}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">Team</span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <a
-                href="#sponsors"
-                onClick={(e) => handleSmoothClick(e, "sponsors")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">
-                  Sponsors
-                </span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={(e) => handleSmoothClick(e, "contact")}
-                className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
-              >
-                <span className="font-medium font-iceland text-2xl">
-                  Contact Us
-                </span>
-                <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                </div>
-              </a>
-            </li>
+            {NAV_LINKS.map((nav) => (
+              <li key={nav.label}>
+                {nav.type === 'link' ? (
+                  <Link
+                    to={nav.to}
+                    onClick={() => setIsOpen(false)}
+                    className="cursor-target group flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg"
+                  >
+                    <span className="font-medium font-iceland text-2xl">{nav.label}</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    </div>
+                  </Link>
+                ) : (
+                  <a
+                    href={nav.href}
+                    onClick={(e) => handleSmoothClick(e, nav.href.replace('#', ''))}
+                    className={`cursor-target group flex items-center px-4 py-3 ${nav.label === 'Home' ? 'text-white' : 'text-gray-300'} hover:bg-gray-800/60 hover:text-blue-400 transition-all duration-200 border-l-4 border-transparent hover:border-blue-400 rounded-r-lg`}
+                  >
+                    <span className="font-medium font-iceland text-2xl">{nav.label}</span>
+                    <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    </div>
+                  </a>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
