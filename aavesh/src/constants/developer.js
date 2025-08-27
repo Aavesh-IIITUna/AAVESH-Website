@@ -2,7 +2,7 @@ export const DEVELOPERS = [
   {
     name: 'Pranav Garg',
     rollNo: '23346',
-    role: 'UI/UX Designer',
+    role: 'UI/UX Designer & Frontend developer',
     image: '/teamPhotos/pranav.jpg',
   },
   {
