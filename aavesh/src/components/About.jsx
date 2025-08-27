@@ -8,8 +8,8 @@ const About = (props) => {
 
       {/* Mobile heading */}
       <div className="w-full max-w-7xl lg:hidden text-center mb-8">
-        <Heading as="h2" align="center" size="sm" colorClass="text-white" className="tracking-wide">We are</Heading>
-        <Heading as="h1" align="center" size="md" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
+  <Heading as="h2" align="center" size="md" colorClass="text-white" className="tracking-wide">We are</Heading>
+  <Heading as="h1" align="center" size="md" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
         <p className="text-gray-300 text-base sm:text-lg font-medium mt-2">– ELECTRONICS & TECH SOCIETY–</p>
         <p className="text-gray-300 text-base sm:text-lg font-medium">IIITUNA</p>
       </div>
@@ -38,7 +38,7 @@ const About = (props) => {
         {/* Heading in center of image gap */}
         <div className="hidden lg:block absolute top-3/2 left-1/2 -translate-x-1/2 -translate-y-[130%] text-center z-20">
           <Heading as="h2" align="center" size="md" colorClass="text-white" className="tracking-wide">We are</Heading>
-          <Heading as="h1" align="center" size="lg" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
+          <Heading as="h1" align="center" size="md" colorClass="text-cyan-400 font-iceland" className="font-bold tracking-widest">AAVESH</Heading>
           <p className="text-gray-300 text-lg font-medium mt-2">– ELECTRONICS & TECH SOCIETY–</p>
           <p className="text-gray-300 text-lg font-medium">IIITUNA</p>
         </div>

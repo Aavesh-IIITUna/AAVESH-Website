@@ -20,11 +20,11 @@ const TeamInfoCard = ({ name, rollNo, role, image }) => {
       </div>
       {/* Card */}
       <div
-        className={`flex flex-col h-[180px] border-2 ${borderClass} rounded-tl-3xl rounded-br-3xl p-3
+        className={`flex flex-col h-[90px] border-2 ${borderClass} rounded-tl-3xl rounded-br-3xl p-3
         bg-[linear-gradient(to_right,#080808,#111,#1a1a1a,#222,#1a1a1a,#111,#080808)]`}
       >
         <div className="flex items-center pl-4">
-          <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-white" />
+          {/* <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-white" /> */}
           <div>
             <h1 className="text-xl text-white">{name}</h1>
             <h4 className="text-xl pr-2">{rollNo}</h4>

@@ -12,7 +12,7 @@ const Developers = () => {
       </div>
       <div className="min-h-screen bg-black text-white flex flex-col justify-center p-6">
         <div>
-          <Heading as="h1" size="lg" className="m-20 text-center mb-8 ml-28">
+          <Heading as="h1" size="md" className="m-20 text-center mb-8 ml-28">
             Meet The Developers
           </Heading>
         </div>

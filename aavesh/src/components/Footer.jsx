@@ -92,7 +92,7 @@ const Footer = (props) => {
             </div>
             </div>
             <div className="border-t-2 border-cyan-600 mb-4 lg:block hidden"></div>
-            <Heading as="h2" sizeClass="text-5xl md:text-7xl" uppercase={false} colorClass="text-white font-iceland" className="font-bold m-2">LET&apos;S CONNECT!</Heading>
+            <Heading as="h2" sizeClass="text-3xl sm:text-4xl md:text-5xl" uppercase={false} colorClass="text-white font-iceland" className="font-bold m-2">LET&apos;S CONNECT!</Heading>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center space-y-4"

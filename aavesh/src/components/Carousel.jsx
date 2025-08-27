@@ -113,7 +113,7 @@ const Carousel = (props) => {
            
       <div className="flex flex-col h-full relative pb-16 pt-6 md:pt-0">
                 <div className="flex-grow">
-  <Heading as="h2" size="lg" colorClass="text-white" className="font-bold mb-4">{currentEvent.title}</Heading>
+  <Heading as="h2" size="md" colorClass="text-white" className="font-bold mb-4">{currentEvent.title}</Heading>
         <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                         {currentEvent.description}
                     </p>
