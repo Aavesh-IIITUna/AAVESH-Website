@@ -65,16 +65,20 @@ const WhatWeDo = (props) => {
       <style>{marqueeStyles}</style>
       <div id={props.id} className="relative flex flex-col items-start justify-center bg-black text-white overflow-x-hidden p-4 md:py-12 md:px-24">
         
-        <header className="w-full mb-16 md:mb-24">
-          <div className="md:mx-72 inline-flex flex-col">
-            <div className="self-start">
-              <DecoratorCircleFirst className="text-gray-400" />
-            </div>
-            <div className=" py-2 self-start">
-              <Heading as="h1" size="md">What we do!</Heading>
-            </div>
-            <div className="self-end">
-              <DecoratorLinesFirst className="text-gray-400" />
+        <header className="w-full max-w-6xl mb-10 md:mb-20 mx-auto">
+          <div className="flex items-center justify-between">
+            <div className="inline-flex flex-col">
+              <div className="self-start">
+                <DecoratorCircleFirst className="text-gray-400" />
+              </div>
+              <div className="self-center">
+                <h1 className="text-4xl sm:text-5xl md:text-5xl font-light tracking-[0.3em] uppercase text-gray-200 py-2">
+                  What we do!
+                </h1>
+              </div>
+              <div className="self-end">
+                <DecoratorLinesFirst className="text-gray-400" />
+              </div>
             </div>
           </div>
         </header>
