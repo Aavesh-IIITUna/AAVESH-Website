@@ -8,7 +8,7 @@ const roleStyles = {
 
 import PropTypes from 'prop-types';
 
-const TeamInfoCard = ({ name, rollNo, role, image }) => {
+const TeamInfoCard = ({ name, rollNo, role,}) => {
   const key = role.toLowerCase().trim();
   const borderClass = roleStyles[key] || "border-gray-500 bg-gray-900";
 
