@@ -61,7 +61,7 @@ const Sponsors = (props) => {
           <div className="relative w-full h-full grid grid-cols-10 grid-rows-10 trapezoid-skew">
             <div className="absolute inset-0 w-full bg-[#6E6D6DB2]">
               <img
-                src="/armssp.jpg"
+                src="/armssp.webp"
                 alt="Futuristic background"
                 className="absolute inset-0 w-full h-full object-cover opacity-30"
                 onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/1024x768/1a1a1a/4a4a4a?text=Image+Error'; }}
