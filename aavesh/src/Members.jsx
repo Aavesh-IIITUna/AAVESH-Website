@@ -3,19 +3,19 @@ export const CoreTeam = [
     name: "ANURAG TIWARI",
     position: "PRESIDENT",
     rollNo: "22209",
-    photourl: "/teamPhotos/anurag.jpg"
+    photourl: "/teamPhotos/anurag.webp"
   },
   {
     name: "KRISH CHOUDHARY",
     position: "VICE PRESIDENT",
     rollNo: "22224",
-    photourl: "/teamPhotos/krish.JPG",
+    photourl: "/teamPhotos/krish.webp",
   },
   {
     name: "HARSHIT KASWAN",
     position: "TREASURER",
     rollNo: "22130",
-    photourl: "/teamPhotos/harshit.JPG",
+    photourl: "/teamPhotos/harshit.webp",
     
   },
 
@@ -23,91 +23,91 @@ export const CoreTeam = [
     name: "KAUSTUBH AGRAWAL",
     position: "CORE ADVISOR",
     rollNo: "22222",
-    photourl: "/teamPhotos/kaustubh.jpg",
+    photourl: "/teamPhotos/kaustubh.webp",
   },
   {
     name: "PRANAV GARG",
     position: "SECRATARY",
     rollNo: "23346",
-    photourl: "/teamPhotos/pranav.jpg",
+    photourl: "/teamPhotos/pranav.webp",
   },
   {
     name: "RISHAV RAJ",
     position: "SECRATARY",
     rollNo: "23241",
-    photourl: "/teamPhotos/rishav.jpg",
+    photourl: "/teamPhotos/rishav.webp",
   },
   {
     name: "TANISHQ SINGH",
     position: "TECHNICAL HEAD",
     rollNo: "23362",
-    photourl: "/teamPhotos/tanishq.jpg",
+    photourl: "/teamPhotos/tanishq.webp",
   },
   {
     name: "DIVYANSH YADAV",
     position: "TECHNICAL HEAD",
     rollNo: "23315",
-    photourl: "/teamPhotos/divyansh.jpg",
+    photourl: "/teamPhotos/divyansh.webp",
   },
   {
     name: "MANMOHAN TRIPATHI",
     position: "INVENTORY HEAD",
     rollNo: "23262",
-    photourl: "/teamPhotos/mm.jpg",
+    photourl: "/teamPhotos/mm.webp",
   },
   {
     name: "SHUBHAM KUMAR",
     position: "INVENTORY HEAD",
     rollNo: "23262",
-    photourl: "/teamPhotos/shubham.jpg",
+    photourl: "/teamPhotos/shubham.webp",
   },
   {
     name: "SRINIVAS PRABHU",
     position: "PR AND SOCIAL MEDIA",
     rollNo: "23251",
-    photourl: "/teamPhotos/srinivas.jpg",
+    photourl: "/teamPhotos/srinivas.webp",
   },
   {
     name: "UJJWAL MISHRA",
     position: "PR AND SOCIAL MEDIA",
     rollNo: "23162",
-    photourl: "/teamPhotos/ujjwal.jpg",
+    photourl: "/teamPhotos/ujjwal.webp",
   },
   {
     name: "UTKARSH RAJPUT",
     position: "VIDEO EDITING HEAD",
     rollNo: "23257",
-    photourl: "/teamPhotos/utkarsh.jpg",
+    photourl: "/teamPhotos/utkarsh.webp",
   },
   {
     name: "VINIT AGRAWAL",
     position: "CONTENT AND DESIGN HEAD",
     rollNo: "23260",
-    photourl: "/teamPhotos/vinit.jpg",
+    photourl: "/teamPhotos/vinit.webp",
   },
   {
     name: "SRISHTI",
     position: "CONTENT AND DESIGN HEAD",
     rollNo: "23252",
-    photourl: "/teamPhotos/srishti.jpg"
+    photourl: "/teamPhotos/srishti.webp"
   },
   {
     name: "GAURAV KUMAR",
     position: "RESEARCH HEAD",
     rollNo: "23318",
-    photourl: "/teamPhotos/gaurav.jpg",
+    photourl: "/teamPhotos/gaurav.webp",
   },
   {
     name: "VANSH VERMA",
     position: "DEVELOPMENT HEAD",
     rollNo: "23165",
-    photourl: "/teamPhotos/vansh.jpg",
+    photourl: "/teamPhotos/vansh.webp",
   },
   {
     name: "JAYDEEP PARMAR",
     position: "VOLUNTEERING HEAD",
     rollNo: "23326",
-    photourl: "/teamPhotos/jaydeep.jpg",
+    photourl: "/teamPhotos/jaydeep.webp",
   },
 ];
 

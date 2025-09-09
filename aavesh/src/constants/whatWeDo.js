@@ -13,7 +13,7 @@ export const marqueeDataTop = [
   },
   {
     text: 'SEMINARS',
-    image: '/gallery/meraki/MM12.webp'
+    image: '/gallery/meraki/MR10.webp'
   }
 ];
 
@@ -32,6 +32,6 @@ export const marqueeDataBottom = [
   },
   {
     text: 'INNOVATION',
-    image: '/gallery/meraki/MM18.webp'
+    image: '/gallery/meraki/MR12.webp'
   }
 ];
