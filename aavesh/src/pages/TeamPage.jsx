@@ -23,7 +23,7 @@ const TeamPage = () => {
         <div className="min-h-screen bg-black text-white flex flex-col p-6">
           
           {/* 🧑‍🏫 Faculty Coordinator Section */}
-          <Heading as="h1" size="md" className="mb-8 ml-28">FACULTY COORDINATOR</Heading>
+          <Heading as="h1" size="md" className="mb-8 md:ml-28 ml-0 md:text-left text-center">FACULTY COORDINATOR</Heading>
           <div className="w-full flex justify-center mb-12">
             <div className="w-full max-w-sm m-auto">
               <CoreTeamInfoCard {...facultyCoordinator} />

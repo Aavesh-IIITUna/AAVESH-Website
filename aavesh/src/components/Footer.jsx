@@ -78,7 +78,7 @@ const Footer = (props) => {
             <div className="flex">
               <div className="w-1/2">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="AAVESH Logo"
               className="m-4 w-64 lg:block hidden"
             />
