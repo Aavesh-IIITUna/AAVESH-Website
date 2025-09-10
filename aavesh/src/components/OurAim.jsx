@@ -85,9 +85,12 @@ export default function OurAim(props) {
     // Animation loop cycles through aimTexts
     const animationLoop = () => {
       scramble(aimTexts[aimIndex], () => {
-        // Move to next aim text, loop back after third
-        setAimIndex((prev) => (prev + 1) % aimTexts.length);
-        loopTimeoutRef.current = setTimeout(animationLoop, 5000);
+        // Now, we wait 5 seconds before updating the index.
+        loopTimeoutRef.current = setTimeout(() => {
+          // This state change triggers the next render and subsequent
+          // animation loop after the 5-second delay.
+          setAimIndex((prev) => (prev + 1) % aimTexts.length);
+        }, 5000); // 5000ms for a 5-second delay
       });
     };
 
@@ -104,7 +107,7 @@ export default function OurAim(props) {
   return (
     <div id={props.id} className="w-full mx-auto mb-10 md:mb-12 px-4">
       <main className="border-2 white rounded-lg h-auto md:h-48 mx-0 md:mx-20 py-4 md:py-2 overflow-hidden">
-  <Heading as="h1" align="center" size="md" colorClass="text-white" className="font-bold mb-3 md:mb-4">Our Aim</Heading>
+        <Heading as="h1" align="center" size="md" colorClass="text-white" className="font-bold mb-3 md:mb-4">Our Aim</Heading>
         <div className="px-4 md:px-6 h-auto md:h-24 flex items-center justify-center">
           <p
             className="text-center text-white text-lg md:text-2xl cursor-pointer overflow-hidden"
