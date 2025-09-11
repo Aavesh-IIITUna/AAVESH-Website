@@ -70,7 +70,7 @@ const Sponsors = (props) => {
       {sponsors.map(sponsor => (
               <div 
                 key={sponsor.id} 
-        className={`relative w-20 h-20 xs:w-24 xs:h-24 sm:w-48 sm:h-48 md:w-56 md:h-56 transform ${sponsor.gridSize}`}
+        className={`relative w-16 h-16 xs:w-20 xs:h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 transform ${sponsor.gridSize}`}
               >
                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl shadow-black/50">
                   <img 
