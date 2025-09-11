@@ -20,10 +20,16 @@ export const CoreTeam = [
   },
 
   {
-    name: "KAUSTUBH AGRAWAL",
+    name: "KAUSTUBH AGARWAL",
     position: "CORE ADVISOR",
     rollNo: "22222",
     photourl: "/teamPhotos/kaustubh.webp",
+  },
+  {
+    name: "KESHAV AGARWAL",
+    position: "CORE ADVISOR",
+    rollNo: "22136",
+    photourl: "/teamPhotos/keshav.webp",
   },
   {
     name: "PRANAV GARG",
