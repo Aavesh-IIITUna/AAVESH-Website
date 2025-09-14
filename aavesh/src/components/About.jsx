@@ -57,18 +57,16 @@ const About = (props) => {
           </ElectricBorder>
         </div>
       </div>
-      {/* Mobile ElectricBorder card between and over images */}
+      {/* Mobile card between and over images */}
       <div className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl w-3/4  z-10 text-center">
-        <ElectricBorder color="#7df9ff" speed={1.2} chaos={0.7} thickness={10} style={{ borderRadius: 24, padding: 10 }}>
-          <div className="bg-black/90 p-6  sm:p-8 shadow-2xl">
-            <p className="text-white text-base sm:text-md font-light mb-4 leading-relaxed">
-              Aavesh is an electronics society that strives to teach and help students acquire new skills in an era of rapidly evolving technology in the field of electronics and communication engineering.
-            </p>
-            <p className="text-white text-base sm:text-md font-light leading-relaxed">
-              Empower students to acquire, demonstrate and articulate the value of knowledge and skills that will support them as lifelong lessons.
-            </p>
-          </div>
-        </ElectricBorder>
+        <div className="bg-black/90 p-6 sm:p-8 shadow-2xl rounded-3xl border border-cyan-400/30">
+          <p className="text-white text-base sm:text-md font-light mb-4 leading-relaxed">
+            Aavesh is an electronics society that strives to teach and help students acquire new skills in an era of rapidly evolving technology in the field of electronics and communication engineering.
+          </p>
+          <p className="text-white text-base sm:text-md font-light leading-relaxed">
+            Empower students to acquire, demonstrate and articulate the value of knowledge and skills that will support them as lifelong lessons.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -178,6 +178,7 @@ const Hero = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isExploreClicked, setIsExploreClicked] = useState(false);
   const words = HERO_WORDS;
 
   useEffect(() => {
@@ -226,18 +227,20 @@ const Hero = () => {
               Robotics, AI, and innovation—crafted by the AAVESH team.
             </p>
             <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <div className="group relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 mx-auto flex items-center justify-center">
-                {/* Orbiting Buttons */}
-                {/* Our Work */}
-                <a href="#whatwedo" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform -translate-y-16 sm:translate-y-0 sm:-translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:-translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
+              <div className="relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 mx-auto flex items-center justify-center">
+                {/* Our Work - Left Side */}
+                <a href="#whatwedo" className={`cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform hover:bg-cyan-800/70 hover:border-cyan-500 ${isExploreClicked ? 'opacity-100 -translate-x-20 sm:-translate-x-24 md:-translate-x-28' : 'opacity-0 -translate-x-12 sm:-translate-x-16 md:-translate-x-20 pointer-events-none'}`}>
                   Our Work
                 </a>
-                {/* Get in Touch */}
-                <a href="#contact" className="cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform translate-y-16 sm:translate-y-0 sm:translate-x-24 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-hover:translate-x-28 hover:bg-cyan-800/70 hover:border-cyan-500">
+                {/* Get in Touch - Right Side */}
+                <a href="#contact" className={`cursor-target absolute w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-cyan-900/50 border border-cyan-600/50 rounded-none flex items-center justify-center text-center text-cyan-300 text-xs sm:text-sm transition-all duration-500 ease-in-out transform hover:bg-cyan-800/70 hover:border-cyan-500 ${isExploreClicked ? 'opacity-100 translate-x-20 sm:translate-x-24 md:translate-x-28' : 'opacity-0 translate-x-12 sm:translate-x-16 md:translate-x-20 pointer-events-none'}`}>
                   Get in Touch
                 </a>
                 {/* Center Button */}
-                <button className="cursor-target relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-black border-2 border-cyan-500 rounded-none text-cyan-400 text-base sm:text-lg font-medium z-10 transition-all duration-300 group-hover:scale-95 group-hover:border-cyan-400 group-hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+                <button 
+                  onClick={() => setIsExploreClicked(!isExploreClicked)}
+                  className={`cursor-target relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-black border-2 border-cyan-500 rounded-none text-cyan-400 text-base sm:text-lg font-medium z-10 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)] ${isExploreClicked ? 'scale-95' : ''}`}
+                >
                   Explore
                 </button>
               </div>
