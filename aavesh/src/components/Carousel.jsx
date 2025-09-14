@@ -91,7 +91,8 @@ const Carousel = (props) => {
                 <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">{currentEvent.date.split(' ')[0]}</p>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-400">{currentEvent.date.split(' ').slice(1).join(' ')}</p>
               </div>
-              <div className="flex gap-4 items-center ml-6">
+              {/* Desktop version - social icons and register button */}
+              <div className="hidden md:flex gap-4 items-center ml-6">
                 <a href="#" aria-label="Instagram" className="hover:text-white transition-colors"><InstagramIcon /></a>
                 <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors"><LinkedinIcon /></a>
                 {currentEvent.formLink && (
@@ -105,9 +106,24 @@ const Carousel = (props) => {
                   </a>
                 )}
               </div>
+              {/* Mobile version - only social icons */}
+              <div className="flex md:hidden gap-4 items-center ml-6">
+                <a href="#" aria-label="Instagram" className="hover:text-white transition-colors"><InstagramIcon /></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-white transition-colors"><LinkedinIcon /></a>
+              </div>
             </div>
-            {/* Mobile-only next arrow */}
-            <div className="mt-4 flex justify-end md:hidden">
+            {/* Mobile-only register and next arrow buttons */}
+            <div className="mt-4 flex gap-4 items-center justify-end md:hidden">
+              {currentEvent.formLink && (
+                <a 
+                  href={currentEvent.formLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="cursor-target bg-teal-600 text-white rounded-none px-6 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50 text-lg font-semibold"
+                >
+                  Register
+                </a>
+              )}
               <button 
                 onClick={handleNextEvent} 
                 className="cursor-target bg-teal-600 text-white rounded-none w-14 h-14 flex items-center justify-center shadow-lg shadow-black/50 hover:bg-teal-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500/50"
