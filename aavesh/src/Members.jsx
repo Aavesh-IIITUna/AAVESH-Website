@@ -414,4 +414,320 @@ export const Team = [
     role: "",
     rollNo: "24235",
   },
+  // First Year Team
+  {
+    name: "Yogesh Meena",
+    rollNo: "26BTCS147",
+    role: "",
+  },
+  {
+    name: "Keerat Mala",
+    rollNo: "26BTEC037",
+    role: "",
+  },
+  {
+    name: "Muskan",
+    rollNo: "26BTCS082",
+    role: "",
+  },
+  {
+    name: "Divyam Garg",
+    rollNo: "26BTCS052",
+    role: "",
+  },
+  {
+    name: "Kratika Saxena",
+    rollNo: "26BTCS070",
+    role: "",
+  },
+  {
+    name: "Arnav Kukrety",
+    rollNo: "26BTDS003",
+    role: "",
+  },
+  {
+    name: "Aditya Maurya",
+    rollNo: "26BTEC008",
+    role: "",
+  },
+  {
+    name: "Adarsh Ratan",
+    rollNo: "26BTCS011",
+    role: "",
+  },
+  {
+    name: "Sounabha Sarkar",
+    rollNo: "26BTCS133",
+    role: "",
+  },
+  {
+    name: "Danish Aggarwal",
+    rollNo: "26BTEC023",
+    role: "",
+  },
+  {
+    name: "Rajat Kaushal",
+    rollNo: "26BTCS108",
+    role: "",
+  },
+  {
+    name: "Megha",
+    rollNo: "26BTEC042",
+    role: "",
+  },
+  {
+    name: "Tanishq",
+    rollNo: "26BTCY022",
+    role: "",
+  },
+  {
+    name: "Disha Goyal",
+    rollNo: "26BTCS051",
+    role: "",
+  },
+  {
+    name: "Naman Gupta",
+    rollNo: "26BTCS083",
+    role: "",
+  },
+  {
+    name: "Kartik Sen",
+    rollNo: "26BTEC036",
+    role: "",
+  },
+  {
+    name: "Devansh Jaiswal",
+    rollNo: "26BTEC027",
+    role: "",
+  },
+  {
+    name: "Chaman Nath",
+    rollNo: "26BTCS043",
+    role: "",
+  },
+  {
+    name: "Nancy",
+    rollNo: "26BTCS084",
+    role: "",
+  },
+  {
+    name: "Aadhish Sonkar",
+    rollNo: "26BTCS001",
+    role: "",
+  },
+  {
+    name: "Deepak Kumar",
+    rollNo: "26BTCS046",
+    role: "",
+  },
+  {
+    name: "Rachit Gautam",
+    rollNo: "26BTCS104",
+    role: "",
+  },
+  {
+    name: "Aditya Kumar",
+    rollNo: "26BTCS014",
+    role: "",
+  },
+  {
+    name: "Krishna Porwal",
+    rollNo: "26BTCS072",
+    role: "",
+  },
+  {
+    name: "Anand Raj",
+    rollNo: "26BTCS021",
+    role: "",
+  },
+  {
+    name: "Arshit Kumar",
+    rollNo: "26BTCY003",
+    role: "",
+  },
+  {
+    name: "Alish",
+    rollNo: "26BTCS018",
+    role: "",
+  },
+  {
+    name: "Arjun Oswal",
+    rollNo: "26BTCS028",
+    role: "",
+  },
+  {
+    name: "Prince Kumar",
+    rollNo: "26BTEC052",
+    role: "",
+  },
+  {
+    name: "Abhinav Palawat",
+    rollNo: "26BTCS006",
+    role: "",
+  },
+  {
+    name: "Gurshanpreet Singh",
+    rollNo: "26BTDS008",
+    role: "",
+  },
+  {
+    name: "Aaryan Bhadani",
+    rollNo: "26BTCY001",
+    role: "",
+  },
+  {
+    name: "Ankit Kumar Rai",
+    rollNo: "26BTCS025",
+    role: "",
+  },
+  {
+    name: "Anant Sinha",
+    rollNo: "26BTCS022",
+    role: "",
+  },
+  {
+    name: "Ashwin Patel",
+    rollNo: "26BTCS035",
+    role: "",
+  },
+  {
+    name: "Chandra Veer Singh",
+    rollNo: "26BTCS044",
+    role: "",
+  },
+  {
+    name: "Yash Tiwari",
+    rollNo: "26BTCS146",
+    role: "",
+  },
+  {
+    name: "Rahl Kumar",
+    rollNo: "26BTCS105",
+    role: "",
+  },
+  {
+    name: "Yash Tyagi",
+    rollNo: "26BTEC068",
+    role: "",
+  },
+  {
+    name: "Sudhanshu",
+    rollNo: "26BTCY020",
+    role: "",
+  },
+  {
+    name: "Shashank Tamrakar",
+    rollNo: "26BTEC060",
+    role: "",
+  },
+  {
+    name: "Satyam Kasaudhan",
+    rollNo: "26BTEC059",
+    role: "",
+  },
+  {
+    name: "Anurag Singh",
+    rollNo: "26BTEC016",
+    role: "",
+  },
+  {
+    name: "Kartik Sharma",
+    rollNo: "26BTCS067",
+    role: "",
+  },
+  {
+    name: "Aarav Singh",
+    rollNo: "26BTEC002",
+    role: "",
+  },
+  {
+    name: "Satyam Jha",
+    rollNo: "26BTCS122",
+    role: "",
+  },
+  {
+    name: "Rudra Kumar Tyagi",
+    rollNo: "26BTEC055",
+    role: "",
+  },
+  {
+    name: "Kushagra Gupta",
+    rollNo: "26BTCS074",
+    role: "",
+  },
+  {
+    name: "Gautam Kala",
+    rollNo: "26BTDS006",
+    role: "",
+  },
+  {
+    name: "Lalit",
+    rollNo: "26BTCS076",
+    role: "",
+  },
+  {
+    name: "Dipesh Jain",
+    rollNo: "26BTEC028",
+    role: "",
+  },
+  {
+    name: "Prakhar Gupta",
+    rollNo: "26BTCS097",
+    role: "",
+  },
+  {
+    name: "Sairaj Bhosle",
+    rollNo: "26BTCS118",
+    role: "",
+  },
+  {
+    name: "Prakhar Gupta",
+    rollNo: "26BTCS097",
+    role: "",
+  },
+  {
+    name: "Vatsalya Awasthi",
+    rollNo: "26BTCS141",
+    role: "",
+  },
+  {
+    name: "Anubhav Joshi",
+    rollNo: "26BTEC015",
+    role: "",
+  },
+  {
+    name: "Kapish Mehra",
+    rollNo: "26BTDS012",
+    role: "",
+  },
+  {
+    name: "Jatin Kaushik",
+    rollNo: "26BTEC031",
+    role: "",
+  },
+  {
+    name: "Nityam Dubey",
+    rollNo: "26BTDS017",
+    role: "",
+  },
+  {
+    name: "Ashutosh Dwivedi",
+    rollNo: "26BTCS034",
+    role: "",
+  },
+  {
+    name: "Aru Gour",
+    rollNo: "26BTDS004",
+    role: "",
+  },
+  {
+    name: "Aaruni Bansal",
+    rollNo: "26BTCS003",
+    role: "",
+  },
+  {
+    name: "Krishna Soni",
+    rollNo: "26BTCS073",
+    role: "",
+  },
 ];
